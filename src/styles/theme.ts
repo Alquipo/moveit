@@ -7,8 +7,10 @@ export default {
     radius: '0.4rem'
   },
   font: {
-    family:
-      "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    family: {
+      inter: 'Inter, sans-serif',
+      rajdhani: 'Rajdhani, sans-serif'
+    },
     light: 300,
     normal: 400,
     bold: 600,
@@ -22,15 +24,17 @@ export default {
     }
   },
   colors: {
-    primary: '#F231A5',
-    secondary: '#3CD3C1',
-    mainBg: '#06092B',
-    lightBg: '#F2F2F2',
-    white: '#FAFAFA',
-    black: '#030517',
-    lightGray: '#EAEAEA',
-    gray: '#8F8F8F',
-    darkGray: '#2E2F42'
+    lightBg: '#f2f3f5',
+    white: '#fff',
+    grayLine: '#DCDDE0',
+    text: '#666666',
+    textHighlight: '#B3B9FF',
+    title: '#2E384D',
+    red: '#E89F5B',
+    green: '#4CD62B',
+    bue: '#5965E0',
+    blueDark: '#4953B8',
+    blueTwitter: '#2AA9E0'
   },
   spacings: {
     xxsmall: '0.8rem',

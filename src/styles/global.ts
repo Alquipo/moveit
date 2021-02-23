@@ -10,20 +10,38 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ${({ theme }) => css`
-    html {
-      font-size: 62.5%;
+    @media (max-width: 1080px) {
+      html {
+        font-size: 93.75%;
+      }
     }
 
-    //temporário somente para colocar a pagina com height 100%
-    html,
-    body,
-    #__next {
-      height: 100%;
+    @media (max-width: 720px) {
+      html {
+        font-size: 87.5%;
+      }
     }
 
     body {
-      font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
+      background-color: ${theme.colors.lightBg};
+      color: ${theme.colors.text};
+    }
+
+    body,
+    input,
+    textarea,
+    button {
+      font: ${theme.font.normal} ${theme.font.sizes.medium}
+        ${theme.font.family.inter};
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
   `}
 
