@@ -36,20 +36,17 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="pt-BR">
+      <Html lang="pt-br">
         <Head>
-          <title>MoveIt</title>
-          <link rel="shortcut icon" href="/img/nextjs-logo.svg" />
-          <link rel="apple-touch-icon" href="/img/nextjs-logo.svg" />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+
+          <link rel="manifest" href="manifest.json" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@700&display=swap"
             rel="stylesheet"
           />
-
-          <meta name="description" content="" />
         </Head>
         <body>
           <Main />
