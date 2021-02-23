@@ -8,7 +8,7 @@ const ExperienceBar = () => (
 
       <S.CurrentExperience style={{ left: '50%' }}>300 xp</S.CurrentExperience>
     </S.ExperienceBar>
-    <span>600xp</span>
+    <span>600 xp</span>
   </S.Wrapper>
 )
 

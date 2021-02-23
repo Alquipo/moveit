@@ -1,13 +1,19 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
 
 import Home from '.'
 
+jest.mock('components/ExperienceBar', () => ({
+  __esModule: true,
+  default: function Mock() {
+    return <div data-testid="Mock ExperienceBar" />
+  }
+}))
+
 describe('<Home />', () => {
   it('should render the heading', () => {
-    const { container } = render(<Home />)
+    renderWithTheme(<Home />)
 
-    expect(screen.getByRole('heading', { name: /Home/i })).toBeInTheDocument()
-
-    expect(container.firstChild).toMatchSnapshot()
+    expect(screen.getByTestId('Mock ExperienceBar')).toBeInTheDocument()
   })
 })

@@ -1,13 +1,14 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
 
 import ExperienceBar from '.'
 
 describe('<ExperienceBar />', () => {
   it('should render the heading', () => {
-    const { container } = render(<ExperienceBar />)
+    renderWithTheme(<ExperienceBar />)
 
-    expect(screen.getByRole('heading', { name: /ExperienceBar/i })).toBeInTheDocument()
-
-    expect(container.firstChild).toMatchSnapshot()
+    expect(screen.getByText('0 xp')).toBeInTheDocument()
+    expect(screen.getByText('300 xp')).toBeInTheDocument()
+    expect(screen.getByText('600 xp')).toBeInTheDocument()
   })
 })
