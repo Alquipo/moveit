@@ -8,8 +8,8 @@ export default {
   },
   font: {
     family: {
-      inter: 'Inter, sans-serif',
-      rajdhani: 'Rajdhani, sans-serif'
+      inter: '"Inter", sans-serif',
+      rajdhani: '"Rajdhani", sans-serif'
     },
     light: 300,
     normal: 400,

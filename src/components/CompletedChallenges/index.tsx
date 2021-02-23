@@ -2,7 +2,8 @@ import * as S from './styles'
 
 const CompletedChallenges = () => (
   <S.Wrapper>
-    <h1>CompletedChallenges</h1>
+    <span>Desafios completos</span>
+    <span>5</span>
   </S.Wrapper>
 )
 

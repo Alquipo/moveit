@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Countdown /> should render the heading 1`] = `
+<main
+  class=""
+>
+  <h1>
+    Countdown
+  </h1>
+</main>
+`;
