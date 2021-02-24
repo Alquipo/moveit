@@ -19,6 +19,8 @@ exports[`<CompletedChallenges /> should render the CompletedChallenges correctly
   border-bottom: 1px solid #d7d8da;
   font-weight: 500;
   color: #EEEEEE;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .c0 span:first-child {

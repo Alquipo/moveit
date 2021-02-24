@@ -11,6 +11,8 @@ exports[`<Profile /> should render the Profile correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: #EEEEEE;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .c0 div {

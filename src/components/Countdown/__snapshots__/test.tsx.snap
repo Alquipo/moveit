@@ -32,6 +32,8 @@ exports[`<Countdown /> should render the heading 1`] = `
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   background-color: #202024;
+  -webkit-transition: background-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out,color 0.3s ease-in-out;
   box-shadow: 0 0 60px rgba(0,0,0,0.05);
   border-radius: 5px;
   font-size: 8.5rem;
@@ -46,10 +48,14 @@ exports[`<Countdown /> should render the heading 1`] = `
 
 .c0 div span:first-child {
   border-right: 1px solid #121214;
+  -webkit-transition: border-right 0.3s ease-in-out;
+  transition: border-right 0.3s ease-in-out;
 }
 
 .c0 div span:last-child {
   border-left: 1px solid #121214;
+  -webkit-transition: border-left 0.3s ease-in-out;
+  transition: border-left 0.3s ease-in-out;
 }
 
 .c0 > span {

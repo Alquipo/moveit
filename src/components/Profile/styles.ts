@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
 
     align-items: center;
     color: ${theme.colors.text};
+    transition: color 0.3s ease-in-out;
 
     div {
       margin-left: 1.5rem;

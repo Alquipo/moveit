@@ -9,6 +9,9 @@ export const Wrapper = styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
+
+    transition: all 0.3s ease-in-out;
+
     /*
     position: sticky;
     top: 0;
