@@ -41,6 +41,11 @@ export const ChallengeActive = styled.div`
       font-size: 1.25rem;
       padding: 0 2rem 1.5rem;
       border-bottom: 1px solid ${theme.colors.grayLine};
+
+      ${media.lessThan('medium')`
+        margin-bottom: 1rem;
+
+     `}
     }
 
     main {
@@ -49,6 +54,11 @@ export const ChallengeActive = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
+      ${media.lessThan('medium')`
+        margin-bottom: 1rem;
+
+     `}
 
       strong {
         font-size: 2rem;
@@ -68,6 +78,10 @@ export const ChallengeActive = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
+      ${media.lessThan('medium')`
+        margin-bottom: 1rem;
+
+     `}
     }
   `}
 `
