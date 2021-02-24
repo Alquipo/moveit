@@ -6,4 +6,8 @@ export default {
   component: CompletedChallenges
 } as Meta
 
-export const Default: Story = () => <CompletedChallenges />
+export const Default: Story = (args) => (
+  <div style={{ maxWidth: '400px', margin: '0 auto' }}>
+    <CompletedChallenges {...args} />
+  </div>
+)
