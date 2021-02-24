@@ -36,9 +36,9 @@
   </a>
 </p>
 
-<h2 align="center">
+<h3 align="center">
   Bem Vindo ao App MoveIt
-</h2>
+</h3>
 
 ## :information_source: O que é Next Level Week?
 
