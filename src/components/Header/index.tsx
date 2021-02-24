@@ -13,7 +13,7 @@ const Header = ({ toggleTheme }: HeaderProps) => {
 
   return (
     <S.Wrapper>
-      <img src="img/logo-full.svg" alt="" />
+      <img src="img/logo-full.svg" alt="Logo" role="button" />
 
       <Switch
         checked={name === 'Light'}

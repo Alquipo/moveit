@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Profile /> should render the Profile correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #EEEEEE;
+}
+
+.c0 div {
+  margin-left: 1.5rem;
+}
+
+.c0 div strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.c0 div p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.c0 div p img {
+  margin-right: 0.5rem;
+}
+
+.c1 {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+}
+
+<div
+  class="c0"
+>
+  <img
+    alt="Alquipo Neto"
+    class="c1"
+    src="https://github.com/alquipo.png"
+  />
+  <div>
+    <strong>
+      Alquipo Neto
+    </strong>
+    <p>
+      <img
+        alt="Level"
+        src="icons/level.svg"
+      />
+      Level 1
+    </p>
+  </div>
+</div>
+`;

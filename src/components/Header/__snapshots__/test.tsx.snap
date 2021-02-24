@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render the Header correctly 1`] = `
+.c0 {
+  height: 60px;
+  background: #202024;
+  color: #EEEEEE;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+<header
+  class="c0"
+>
+  <img
+    alt="Logo"
+    role="button"
+    src="img/logo-full.svg"
+  />
+  <img
+    data-testid="Mock Switch"
+  />
+</header>
+`;
