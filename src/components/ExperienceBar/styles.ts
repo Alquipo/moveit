@@ -1,12 +1,15 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.header`
-  display: flex;
-  align-items: center;
+export const Wrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    color: ${theme.colors.text};
 
-  span {
-    font-size: 1rem;
-  }
+    span {
+      font-size: 1rem;
+    }
+  `}
 `
 export const ExperienceBar = styled.div`
   ${({ theme }) => css`

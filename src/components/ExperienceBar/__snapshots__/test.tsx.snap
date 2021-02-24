@@ -10,6 +10,7 @@ exports[`<ExperienceBar /> should render the heading 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  color: #EEEEEE;
 }
 
 .c0 span {
@@ -30,7 +31,7 @@ exports[`<ExperienceBar /> should render the heading 1`] = `
 .c2 {
   height: 4px;
   border-radius: 4px;
-  background-color: #4CD62B;
+  background-color: #04d361;
 }
 
 .c3 {
@@ -41,7 +42,7 @@ exports[`<ExperienceBar /> should render the heading 1`] = `
   transform: translateX(-50%);
 }
 
-<header
+<div
   class="c0"
 >
   <span>
@@ -64,5 +65,5 @@ exports[`<ExperienceBar /> should render the heading 1`] = `
   <span>
     600 xp
   </span>
-</header>
+</div>
 `;
