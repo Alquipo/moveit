@@ -1,11 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Countdown /> should render the heading 1`] = `
-<main
-  class=""
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Rajdhani",sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.c0 div {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  background-color: #202024;
+  box-shadow: 0 0 60px rgba(0,0,0,0.05);
+  border-radius: 5px;
+  font-size: 8.5rem;
+  text-align: center;
+}
+
+.c0 div span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c0 div span:first-child {
+  border-right: 1px solid #121214;
+}
+
+.c0 div span:last-child {
+  border-left: 1px solid #121214;
+}
+
+.c0 > span {
+  font-size: 6.25rem;
+  margin: 0 0.5rem;
+}
+
+<div
+  class="c0"
 >
-  <h1>
-    Countdown
-  </h1>
-</main>
+  <div>
+    <span>
+      2
+    </span>
+    <span>
+      5
+    </span>
+  </div>
+  <span>
+    :
+  </span>
+  <div>
+    <span>
+      0
+    </span>
+    <span>
+      0
+    </span>
+  </div>
+</div>
 `;

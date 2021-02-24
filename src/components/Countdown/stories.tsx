@@ -6,4 +6,4 @@ export default {
   component: Countdown
 } as Meta
 
-export const Default: Story = () => <Countdown />
+export const Default: Story = (args) => <Countdown {...args} />
