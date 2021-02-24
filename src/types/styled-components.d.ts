@@ -15,6 +15,7 @@ declare module 'styled-components' {
       blue: string
       blueDark: string
     }
+    boxShadow: string
     font: {
       family: {
         inter: string
@@ -48,5 +49,6 @@ declare module 'styled-components' {
       blue: string
       blueDark: string
     }
+    boxShadow: string
   }
 }

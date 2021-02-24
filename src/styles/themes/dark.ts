@@ -12,5 +12,6 @@ export default {
     blue: '#8257e6',
     blueDark: '#896ceb'
     // blueTwitter: '#2AA9E0'
-  }
+  },
+  boxShadow: '0 0 4px rgba(0, 0, 0, 1)'
 }

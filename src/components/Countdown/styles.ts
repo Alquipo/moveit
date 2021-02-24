@@ -16,9 +16,11 @@ export const WrapperCountdown = styled.div`
       justify-content: space-evenly;
 
       background-color: ${theme.colors.backgroundBox};
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
 
-      box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+      box-shadow: ${theme.boxShadow};
+
       border-radius: 5px;
       font-size: 8.5rem;
       text-align: center;
