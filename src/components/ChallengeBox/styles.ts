@@ -112,25 +112,28 @@ export const ChallengeButton = styled.button<ChallengeButtonProps>`
 `
 
 export const ChallengeNotActive = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  strong {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  p {
+  ${({ theme }) => css`
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.4;
-    margin-top: 3rem;
+    color: ${theme.colors.text};
 
-    img {
-      margin-bottom: 1rem;
+    strong {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.4;
     }
-  }
+
+    p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.4;
+      margin-top: 3rem;
+
+      img {
+        margin-bottom: 1rem;
+      }
+    }
+  `}
 `

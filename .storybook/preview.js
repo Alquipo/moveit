@@ -2,6 +2,7 @@ import { addDecorator } from '@storybook/react'
 import { withNextRouter } from 'storybook-addon-next-router'
 import { ThemeProvider } from 'styled-components'
 import { withThemesProvider } from 'themeprovider-storybook'
+import { ChallengesProvider } from 'contexts/ChallengesContext'
 
 import { combineTheme, dark, light } from 'styles/themes'
 
@@ -29,7 +30,9 @@ export const decorators = [
   (Story) => {
     return (
       <ThemeProvider theme={combineTheme(dark)}>
-        <Story />
+        <ChallengesProvider>
+          <Story />
+        </ChallengesProvider>
       </ThemeProvider>
     )
   }
