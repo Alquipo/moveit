@@ -3,17 +3,17 @@
   "short_name": "moveIt",
   "icons": [
     {
-      "src": "img/favicon.png",
+      "src": "img/launchericon-96-96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/launchericon-192-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "img/favicon.png",
-      "type": "image/png",
-      "sizes": "384x384"
-    },
-    {
-      "src": "img/favicon.png",
+      "src": "img/launchericon-512-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
