@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChallengeBox /> should render the heading 1`] = `
+<main
+  class=""
+>
+  <h1>
+    ChallengeBox
+  </h1>
+</main>
+`;
