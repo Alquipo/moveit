@@ -57,21 +57,21 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
 ### Mobile
 
 <h4 align="center">
-  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-full.gif" width="194px" />
-  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-home-full.jpg" width="200px" />
-  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-point.jpg" width="200px" />
-  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-detail.jpg" width="200px" />
+  <img alt="ExampleMobile" title="ExampleMobile" src=".github/readme/mobile.gif" width="200px" />
+  <img alt="ExampleMobile" title="ExampleMobile" src=".github/readme/mobile-dark.jpeg" width="200px" />
+  <img alt="ExampleMobile" title="ExampleMobile" src=".github/readme/mobile-light.jpeg" width="200px" />
+  <!-- <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-detail.jpg" width="200px" /> -->
 </h4>
 
 ### Web
 
-<h4 align="center">
+<!-- <h4 align="center">
   <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-point.gif" width="500px" />
-</h4>
+</h4> -->
 <h4 align="center">
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-dark.png" width="450px" />
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-dark.png" width="400px" />
 
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-light.png" width="450px" />
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-light.png" width="400px" />
 </h4>
 
 ## :tada: Melhorias
