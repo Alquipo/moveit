@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
     font-weight: 500;
 
     color: ${theme.colors.text};
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
 
     span:first-child {
       font-size: 1.25rem;

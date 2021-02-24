@@ -7,6 +7,7 @@ export const WrapperCountdown = styled.div`
     font-family: ${theme.font.family.rajdhani};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.title};
+    transition: color 0.3s;
 
     div {
       flex: 1;
@@ -16,10 +17,9 @@ export const WrapperCountdown = styled.div`
       justify-content: space-evenly;
 
       background-color: ${theme.colors.backgroundBox};
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-        box-shadow 0.3s ease-in-out;
-
       box-shadow: ${theme.boxShadow};
+
+      transition: background-color 0.3s, box-shadow 0.3s;
 
       border-radius: 5px;
       font-size: 8.5rem;
@@ -31,11 +31,11 @@ export const WrapperCountdown = styled.div`
 
       span:first-child {
         border-right: 1px solid ${theme.colors.background};
-        transition: border-right 0.3s ease-in-out;
+        transition: border-right 0.3s;
       }
       span:last-child {
         border-left: 1px solid ${theme.colors.background};
-        transition: border-left 0.3s ease-in-out;
+        transition: border-left 0.3s;
       }
     }
 
@@ -67,10 +67,10 @@ export const CountdownButton = styled.button<ButtonProps>`
     background-color: ${theme.colors.blue};
     color: ${theme.colors.backgroundBox};
 
+    transition: background-color 0.3s, color 0.3s;
+
     font-size: 1.25rem;
     font-weight: ${theme.font.bold};
-
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     outline: 0;
 
@@ -82,20 +82,21 @@ export const CountdownButton = styled.button<ButtonProps>`
 
     &:not(:disabled):hover {
       background-color: ${theme.colors.blueDark};
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      transition: background-color 0.3s;
     }
 
     &:disabled {
       background-color: ${theme.colors.backgroundBox};
       color: ${theme.colors.text};
+      transition: background-color 0.3s, color 0.3s;
+
       cursor: not-allowed;
 
       border-bottom: 4px solid ${theme.colors.green};
 
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
       svg {
         color: ${theme.colors.green};
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        transition: color 0.3s;
       }
     }
 
@@ -103,12 +104,14 @@ export const CountdownButton = styled.button<ButtonProps>`
     css`
       background-color: ${theme.colors.backgroundBox};
       color: ${theme.colors.text};
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+      transition: background-color 0.3s, color 0.3s;
 
       &:not(:disabled):hover {
         background-color: ${theme.colors.red};
         color: ${theme.colors.backgroundBox};
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        transition: background-color 0.3s, color 0.3s;
       }
     `}
   `}

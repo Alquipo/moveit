@@ -5,6 +5,7 @@ import ExperienceBar from 'components/ExperienceBar'
 import Profile from 'components/Profile'
 
 import * as S from './styles'
+import ChallengeBox from 'components/ChallengeBox'
 
 const HomeTemplate = () => (
   <S.Wrapper>
@@ -24,7 +25,9 @@ const HomeTemplate = () => (
         <Countdown />
       </S.LeftContainer>
 
-      <div></div>
+      <div>
+        <ChallengeBox />
+      </div>
     </S.Section>
   </S.Wrapper>
 )

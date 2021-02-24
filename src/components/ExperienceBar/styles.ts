@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     color: ${theme.colors.text};
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
 
     span {
       font-size: 1rem;

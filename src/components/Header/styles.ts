@@ -5,16 +5,11 @@ export const Wrapper = styled.header`
     height: 60px;
     background: ${theme.colors.backgroundBox};
     color: ${theme.colors.text};
+    transition: background-color 0.3s, color 0.3s;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-
-    /*
-    position: sticky;
-    top: 0;
-    z-index: 2; */
   `}
 `
