@@ -1,26 +1,28 @@
-<img alt="NextJS" title="NextJS" src=".github/readme/NextJs.png" />
+<p align="center">
+  <img  alt="MoveIt Logo" title="MoveIt" src=".github/readme/logo-full.svg" />
+</p>
 
 <h1 align="center">
-🚧 Boilerplat NextJs  | Em Construção 🚧
+🚧 MoveIt | Em Construção 🚧
 </h1>
 
 <p align="center">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Alquipo/boilerplate-nextjs">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Alquipo/moveit">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Alquipo/boilerplate-nextjs">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Alquipo/moveit">
 
   <a href="https://www.linkedin.com/in/alquiponeto/">
       <img alt="Made by Alquipo" src="https://img.shields.io/badge/made%20by-AlquipoNeto-blue">
   </a>
 
-  <a href="https://github.com/Alquipo/boilerplate-nextjs/commits/master">
-      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alquipo/boilerplate-nextjs?color=blue">
+  <a href="https://github.com/Alquipo/moveit/commits/master">
+      <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alquipo/moveit?color=blue">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=blue">
 
-<img alt="CI Workflow" src="https://github.com/Alquipo/boilerplate-nextjs/workflows/ci/badge.svg?color=blue">
+<img alt="CI Workflow" src="https://github.com/Alquipo/moveit/workflows/ci/badge.svg?color=blue">
 </p>
 
 <p align="center">
@@ -35,35 +37,67 @@
 </p>
 
 <h2 align="center">
-  Bem Vindo a o Boilerplate em NextJS
+  Bem Vindo ao App MoveIt
 </h2>
+
+## :information_source: O que é Next Level Week?
+
+O [NLW](https://nextlevelweek.com/inscricao/1) é uma semana prática com muito código, desafios, network e com um único objetivo: levá-lo ao próximo nível.
+Através do método da [Rocketseat][rs], você aprenderá novas ferramentas, tecnologias e descobrirá hacks que irão impulsionar sua carreira.
+Um evento online e totalmente gratuito que o ajudará a dar o próximo passo na sua evolução como desenvolvedor.
 
 ## 🚀 Sobre o Projeto
 
-Este e um boilerplate em [Next.js](https://nextjs.org/) usado em meus projetos FrontEnd.
+MoveIt e uma aplicação para incentivar que fica horas no computador para se exercitar, usando o método pomodoro, a cada 25 minutos concentrado no trabalho ele terá uma pausa para efetuar um pequeno exercício e com adição da gamificação na aplicação tudo fica mais divertido.
 
 ## 🎨 Layout
 
-<!-- Design feito por -->
+Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/)
 
-<table>
-  <tr>
-    <td colspan="1"><h4 align="center">Geração de Componentes</h4> </td>
-    <td colspan="1"><h4 align="center">Storybook</h4></td>
-    <td colspan="1"><h4 align="center">Main Component</h4></td>
-  </tr>
-  <tr>
-    <td><img src=".github/readme/generate-components.png" width=300 /></td>
-    <td>
-      <a target="_blank" href="https://raw.githubusercontent.com/Alquipo/boilerplate-nextjs/master/.github/readme/storybook-main.png">
-        <img src=".github/readme/storybook-main.png" width=300 />
-      </a>
-    </td>
-    <td><img src=".github/readme/component-main.png" width=300 /></td>
-    <!-- <td><img src=".github/readme/component-main.png" width=180 /></td>
-    <td><img src=".github/readme/component-main.png" width=180 /></td> -->
-  </tr>
-</table>
+### Mobile
+
+<h4 align="center">
+  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-full.gif" width="194px" />
+  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-home-full.jpg" width="200px" />
+  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-point.jpg" width="200px" />
+  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-detail.jpg" width="200px" />
+</h4>
+
+### Web
+
+<h4 align="center">
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-point.gif" width="500px" />
+</h4>
+<h4 align="center">
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-dark.png" width="450px" />
+
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-light.png" width="450px" />
+</h4>
+
+## :tada: Melhorias
+
+Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando alguns bugs que havia ficado no projeto original
+
+##### - Bugs Corrigidos: :bug:
+
+    - Ajuste no envio dos números de WhatsApp da aplicação Web, estava adicionando um .0 no final de todos os telefones na tabela do BD;
+    - Número do WhatsApp agora adiciona +55 no envio da mensagem pelo App Mobile
+
+##### - Melhorias na Aplicação: :medal_sports:
+
+**WEB**:
+
+    -Adicionado mascara no input  do Whatsapp;
+    -Adicionado Modal com timeout na finalização do cadastro do Ponto de Coleta;
+    -Adicionado mouse Pointed em diversas partes da interface;
+
+**Mobile**:
+
+    -Adicionado menu de seleção na Home do aplicativo;
+    -Integrado o menu de seleção com a api do **IBGE**;
+    -Adicionado restrições para só avançar para proxima tela após selecionar o Estado e a Cidade;
+    -Ajustados os Paddings dos icones para  o android
+    -Melhorias na interface de todo o aplicativo
 
 ## 🔨 Tecnologias:
 

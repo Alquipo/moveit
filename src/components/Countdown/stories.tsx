@@ -6,4 +6,8 @@ export default {
   component: Countdown
 } as Meta
 
-export const Default: Story = (args) => <Countdown {...args} />
+export const Default: Story = (args) => (
+  <div style={{ maxWidth: '400px', margin: '0 auto' }}>
+    <Countdown {...args} />
+  </div>
+)
