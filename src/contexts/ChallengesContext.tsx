@@ -27,9 +27,9 @@ export const ChallengesContext = createContext({} as ChallengesContextData)
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [level, setLevel] = useState(1)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentExperience, setCurrentExperience] = useState(0)
+  const [currentExperience, setCurrentExperience] = useState(50)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [challengesCompleted, setChallengesCompleted] = useState(0)
+  const [challengesCompleted, setChallengesCompleted] = useState(10)
 
   const [activeChallenge, setActiveChallenge] = useState(null)
 
