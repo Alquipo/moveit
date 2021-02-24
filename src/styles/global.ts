@@ -1,4 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components'
+import media from 'styled-media-query'
 
 const GlobalStyles = createGlobalStyle`
   *{
@@ -16,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
       }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 768px) {
       html {
         font-size: 87.5%;
       }
@@ -26,8 +27,15 @@ const GlobalStyles = createGlobalStyle`
       background-color: ${theme.colors.background};
       color: ${theme.colors.text};
       transition: background-color 0.3s, color 0.3s;
+
       overflow: hidden;
+
+      ${media.lessThan('medium')`
+        overflow-x: hidden;
+        overflow-y: auto;
+       `}
     }
+  }
 
     body,
     input,
