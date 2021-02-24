@@ -18,8 +18,8 @@ exports[`<Header /> should render the Header correctly 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0 30px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out,color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out,color 0.3s ease-in-out;
 }
 
 <header

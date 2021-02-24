@@ -43,8 +43,13 @@ export const WrapperCountdown = styled.div`
     }
   `}
 `
-export const CountdownButton = styled.button`
-  ${({ theme }) => css`
+
+type ButtonProps = {
+  isActive?: boolean
+}
+
+export const CountdownButton = styled.button<ButtonProps>`
+  ${({ theme, isActive }) => css`
     width: 100%;
     height: 5rem;
 
@@ -58,7 +63,6 @@ export const CountdownButton = styled.button`
     border-radius: 5px;
 
     background-color: ${theme.colors.blue};
-
     color: ${theme.colors.backgroundBox};
 
     font-size: 1.25rem;
@@ -68,8 +72,42 @@ export const CountdownButton = styled.button`
 
     outline: 0;
 
-    &:hover {
-      background-color: ${theme.colors.blueDark};
+    svg {
+      width: 2rem;
+      height: 2rem;
+      margin-left: 0.7rem;
     }
+
+    &:not(:disabled):hover {
+      background-color: ${theme.colors.blueDark};
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    &:disabled {
+      background-color: ${theme.colors.backgroundBox};
+      color: ${theme.colors.text};
+      cursor: not-allowed;
+
+      border-bottom: 4px solid ${theme.colors.green};
+
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      svg {
+        color: ${theme.colors.green};
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+    }
+
+    ${isActive &&
+    css`
+      background-color: ${theme.colors.backgroundBox};
+      color: ${theme.colors.text};
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+      &:not(:disabled):hover {
+        background-color: ${theme.colors.red};
+        color: ${theme.colors.backgroundBox};
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+    `}
   `}
 `

@@ -10,7 +10,7 @@ export const Wrapper = styled.header`
     justify-content: space-between;
     padding: 0 30px;
 
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
     /*
     position: sticky;
