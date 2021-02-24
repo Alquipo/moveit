@@ -25,9 +25,9 @@ const HomeTemplate = () => (
         <Countdown />
       </S.LeftContainer>
 
-      <div>
+      <S.RightContainer>
         <ChallengeBox />
-      </div>
+      </S.RightContainer>
     </S.Section>
   </S.Wrapper>
 )

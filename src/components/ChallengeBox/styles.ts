@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { darken } from 'polished'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -19,6 +20,11 @@ export const Wrapper = styled.div`
     justify-content: center;
 
     text-align: center;
+
+    ${media.lessThan('medium')`
+    margin-bottom: 4rem;
+
+  `}
   `}
 `
 export const ChallengeActive = styled.div`
