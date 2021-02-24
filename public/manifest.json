@@ -1,21 +1,26 @@
 {
-  "name": "Boilerplate NextJs",
-  "short_name": "Boilerplate",
+  "name": "moveIt",
+  "short_name": "moveIt",
   "icons": [
     {
-      "src": "/img/icon-192.png",
+      "src": "img/favicon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/icon-512.png",
+      "src": "img/favicon.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "img/favicon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "background_color": "#06092B",
-  "description": "Boilerplate utilizando Typescript, React, NextJS e Styled Components!",
+  "background_color": "#121214",
+  "description": "MoveIt developer by Alquipo",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#06092B"
+  "theme_color": "#121214"
 }
