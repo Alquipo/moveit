@@ -4,7 +4,7 @@ import Switch from 'react-switch'
 
 import * as S from './styles'
 
-type HeaderProps = {
+export type HeaderProps = {
   toggleTheme(): void
 }
 
