@@ -57,6 +57,7 @@ export const ChallengeActive = styled.div`
         line-height: 1.5;
       }
     }
+
     footer {
       display: grid;
       grid-template-columns: 1fr 1fr;

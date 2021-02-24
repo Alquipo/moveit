@@ -1,10 +1,16 @@
+import { useContext } from 'react'
+import { ChallengesContext } from 'contexts/ChallengesContext'
 import * as S from './styles'
 
-const CompletedChallenges = () => (
-  <S.Wrapper>
-    <span>Desafios completos</span>
-    <span>5</span>
-  </S.Wrapper>
-)
+const CompletedChallenges = () => {
+  const { challengesCompleted } = useContext(ChallengesContext)
+
+  return (
+    <S.Wrapper>
+      <span>Desafios completos</span>
+      <span>{challengesCompleted}</span>
+    </S.Wrapper>
+  )
+}
 
 export default CompletedChallenges

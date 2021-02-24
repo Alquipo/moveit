@@ -1,15 +1,18 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 
 import { Close } from '@styled-icons/evaicons-solid/Close'
 import { Play } from '@styled-icons/foundation/Play'
 import { CheckCircle } from '@styled-icons/boxicons-solid/CheckCircle'
 
 import * as S from './styles'
+import { ChallengesContext } from 'contexts/ChallengesContext'
 
 let countdownTimeout: NodeJS.Timeout
 
 const Countdown = () => {
-  const [time, setTime] = useState(25 * 60)
+  const { startNewChallenge } = useContext(ChallengesContext)
+
+  const [time, setTime] = useState(0.05 * 60)
   const [isActive, setIsActive] = useState(false)
   const [hasFinished, setHasFinished] = useState(false)
 
@@ -27,7 +30,7 @@ const Countdown = () => {
   function resetCountdown() {
     clearTimeout(countdownTimeout)
     setIsActive(false)
-    setTime(25 * 60)
+    setTime(0.05 * 60)
   }
 
   useEffect(() => {
@@ -38,8 +41,9 @@ const Countdown = () => {
     } else if (isActive && time === 0) {
       setHasFinished(true)
       setIsActive(false)
+      startNewChallenge()
     }
-  }, [isActive, time])
+  }, [isActive, time, startNewChallenge])
 
   return (
     <>

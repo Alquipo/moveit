@@ -2,10 +2,11 @@ import { AppProps } from 'next/app'
 import { useState } from 'react'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
+import GlobalStyles from 'styles/global'
 import { combineTheme, dark, light } from 'styles/themes'
 
-import GlobalStyles from 'styles/global'
 import Header from 'components/Header'
+import { ChallengesProvider } from 'contexts/ChallengesContext'
 
 function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState<DefaultTheme>(combineTheme(dark))
@@ -16,9 +17,11 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Header toggleTheme={toggleTheme} />
-      <Component {...pageProps} />
+      <ChallengesProvider>
+        <GlobalStyles />
+        <Header toggleTheme={toggleTheme} />
+        <Component {...pageProps} />
+      </ChallengesProvider>
     </ThemeProvider>
   )
 }
