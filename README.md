@@ -76,28 +76,16 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
 
 ## :tada: Melhorias
 
-Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando alguns bugs que havia ficado no projeto original
-
-##### - Bugs Corrigidos: :bug:
-
-    - Ajuste no envio dos números de WhatsApp da aplicação Web, estava adicionando um .0 no final de todos os telefones na tabela do BD;
-    - Número do WhatsApp agora adiciona +55 no envio da mensagem pelo App Mobile
+Com aprendizado da **NLW** acabei realizando melhorias no projeto
 
 ##### - Melhorias na Aplicação: :medal_sports:
 
-**WEB**:
-
-    -Adicionado mascara no input  do Whatsapp;
-    -Adicionado Modal com timeout na finalização do cadastro do Ponto de Coleta;
-    -Adicionado mouse Pointed em diversas partes da interface;
-
-**Mobile**:
-
-    -Adicionado menu de seleção na Home do aplicativo;
-    -Integrado o menu de seleção com a api do **IBGE**;
-    -Adicionado restrições para só avançar para proxima tela após selecionar o Estado e a Cidade;
-    -Ajustados os Paddings dos icones para  o android
-    -Melhorias na interface de todo o aplicativo
+    -Adicionado theme dark na aplicação;
+    -Adicionado opção de PWA na aplicação;
+    -Adicionado Switch para alterar os themes;
+    -Adicionado Ícones para representar os botões;
+    -Efetuado diversos ajustes no designer da aplicação;
+    -Efetuado ajustes para o mobile e PWA;
 
 ## 🔨 Tecnologias:
 
@@ -111,6 +99,8 @@ Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando 
 - **[Prettier](https://prettier.io/)**
 - **[Husky](https://github.com/typicode/husky)**
 - **[PlopJS](https://plopjs.com/)**
+- **[Polished](https://polished.js.org/)**
+- **[Styled-Icons](https://styled-icons.js.org/)**
 
 ## 🔎 Comandos
 
@@ -132,10 +122,10 @@ Para clonar e executar este aplicativo, você precisará de [Git](https://git-sc
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/Alquipo/boilerplate-nextjs
+$ git clone https://github.com/Alquipo/moveit
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd boilerplate-nextjs
+$ cd moveit
 ```
 
 ### 🎲 Rodando a Aplicação
@@ -157,6 +147,12 @@ $ yarn dev
 #Criação de um componente completo com (index.tsx / stories.tsx / styles.ts / test.tsx)
 $ yarn generate ComponentName
 
+#Rodar o Storybook
+$ yarn storybook
+
+#Rodar os testes
+$ yarn test
+
 ```
 
 ## 🤔 Como contribuir para o projeto
@@ -173,5 +169,3 @@ $ yarn generate ComponentName
 Este projeto esta sobe a licença MIT. Veja a [LICENÇA](https://opensource.org/licenses/MIT) para saber mais.
 
 Feito com ❤️ por Alquipo Neto 👋🏽 [Entre em contato!](https://www.linkedin.com/in/alquiponeto/)
-
-</h3>
