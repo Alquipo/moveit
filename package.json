@@ -20,7 +20,7 @@
     "next-pwa": "^5.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "storybook-addon-next-router": "^2.0.4",
+    "react-switch": "^6.0.0",
     "styled-components": "^5.2.1",
     "styled-icons": "^10.28.0",
     "styled-media-query": "^2.1.2"
@@ -51,6 +51,8 @@
     "lint-staged": "^10.5.4",
     "plop": "^2.7.4",
     "prettier": "^2.2.1",
+    "storybook-addon-next-router": "^2.0.4",
+    "themeprovider-storybook": "^1.7.1",
     "typescript": "^4.1.5"
   }
 }

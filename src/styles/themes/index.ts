@@ -1,4 +1,8 @@
-export default {
+import { DefaultTheme, CustomTheme } from 'styled-components'
+import dark from './dark'
+import light from './light'
+
+const defaultTheme = {
   font: {
     family: {
       inter: '"Inter", sans-serif',
@@ -15,18 +19,11 @@ export default {
       xlarge: '2.0rem',
       xxlarge: '2.8rem'
     }
-  },
-  colors: {
-    lightBg: '#f2f3f5',
-    white: '#fff',
-    grayLine: '#DCDDE0',
-    text: '#666666',
-    textHighlight: '#B3B9FF',
-    title: '#2E384D',
-    red: '#E89F5B',
-    green: '#4CD62B',
-    blue: '#5965E0',
-    blueDark: '#4953B8',
-    blueTwitter: '#2AA9E0'
   }
-} as const
+}
+
+function combineTheme(theme: CustomTheme): DefaultTheme {
+  return { ...defaultTheme, ...theme }
+}
+
+export { combineTheme, dark, light }

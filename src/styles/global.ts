@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      background-color: ${theme.colors.lightBg};
+      background-color: ${theme.colors.background};
       color: ${theme.colors.text};
     }
 
