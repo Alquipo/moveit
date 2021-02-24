@@ -38,7 +38,8 @@ export const LeftContainer = styled.div`
 
 export const RightContainer = styled.div`
   ${media.lessThan('medium')`
-    margin-bottom: 3rem;
 
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   `}
 `
