@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     display: flex;
 
     align-items: center;
+    color: ${theme.colors.text};
 
     div {
       margin-left: 1.5rem;
