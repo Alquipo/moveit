@@ -65,9 +65,9 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
 
 ### Web
 
-<!-- <h4 align="center">
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-point.gif" width="500px" />
-</h4> -->
+<h4 align="center">
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop.gif" width="800px" />
+</h4>
 <h4 align="center">
   <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-dark.png" width="400px" />
 
@@ -91,6 +91,7 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
     -Adicionado opção de PWA na aplicação;
     -Adicionado Switch para alterar os themes;
     -Adicionado Ícones para representar os botões;
+    -Adicionado component para SEO;
     -Efetuado diversos ajustes no designer da aplicação;
     -Efetuado ajustes para o mobile e PWA;
 
