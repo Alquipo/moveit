@@ -66,7 +66,7 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
 ### Web
 
 <h4 align="center">
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop.gif" width="800px" />
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop.gif" width="500px" />
 </h4>
 <h4 align="center">
   <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-dark.png" width="400px" />

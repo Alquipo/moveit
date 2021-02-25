@@ -1,8 +1,12 @@
+import Tooltip from 'components/Tooltip'
 import * as S from './styles'
 
 const Profile = () => (
   <S.Wrapper>
-    <S.ProfileImage src="https://github.com/alquipo.png" alt="Alquipo Neto" />
+    <Tooltip text={'Click aqui para alterar o tema'}>
+      <S.ProfileImage src="https://github.com/alquipo.png" alt="Alquipo Neto" />
+    </Tooltip>
+
     <div>
       <strong>Alquipo Neto</strong>
       <p>

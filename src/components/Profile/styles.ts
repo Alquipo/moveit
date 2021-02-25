@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     color: ${theme.colors.text};
     transition: color 0.3s;
 
-    div {
+    div:last-child {
       margin-left: 1.5rem;
 
       strong {
