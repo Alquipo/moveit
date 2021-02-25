@@ -85,11 +85,7 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
   <img alt="Example Test" title="ExampleTest" src=".github/readme/test-temporary.png" width="800px" />
 
 </h4>
-## :tada: Melhorias
-
-Com aprendizado da **NLW** acabei realizando melhorias no projeto
-
-##### - Melhorias na Aplicação: :medal_sports:
+## :tada: Melhorias na Aplicação
 
     -Adicionado theme dark na aplicação;
     -Adicionado opção de PWA na aplicação;
