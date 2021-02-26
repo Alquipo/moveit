@@ -5,6 +5,7 @@ declare module 'styled-components' {
     name: string
     colors: {
       background: string
+      backgroundOverlay: string
       backgroundBox: string
       grayLine: string
       text: string
@@ -39,6 +40,7 @@ declare module 'styled-components' {
     name: string
     colors: {
       background: string
+      backgroundOverlay: string
       backgroundBox: string
       grayLine: string
       text: string

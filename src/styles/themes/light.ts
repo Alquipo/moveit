@@ -2,6 +2,7 @@ export default {
   name: 'Light',
   colors: {
     background: '#F2F3F5',
+    backgroundOverlay: 'rgba(242, 243, 245, 0.8)',
     backgroundBox: '#FFFFFF',
     grayLine: '#DCDDE0',
     text: '#666666',
