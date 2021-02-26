@@ -1,3 +1,4 @@
+import { ChallengesProvider } from 'contexts/ChallengesContext'
 import { CountdownProvider } from 'contexts/CountdownContext'
 
 import SEO from 'components/SEO'
@@ -9,31 +10,47 @@ import Profile from 'components/Profile'
 import * as S from './styles'
 import ChallengeBox from 'components/ChallengeBox'
 
-const HomeTemplate = () => (
-  <S.Wrapper>
-    <SEO
-      title="Inicio"
-      image="logo-full.svg"
-      description="A app to make you move."
-      shouldIndexPage
-    />
+export type HomeTemplateProps = {
+  level: number
+  currentExperience: number
+  challengesCompleted: number
+}
 
-    <ExperienceBar />
+const HomeTemplate = ({
+  challengesCompleted,
+  currentExperience,
+  level
+}: HomeTemplateProps) => (
+  <ChallengesProvider
+    challengesCompleted={challengesCompleted}
+    currentExperience={currentExperience}
+    level={level}
+  >
+    <S.Wrapper>
+      <SEO
+        title="Inicio"
+        image="logo-full.svg"
+        description="A app to make you move."
+        shouldIndexPage
+      />
 
-    <CountdownProvider>
-      <S.Section>
-        <S.LeftContainer>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
-        </S.LeftContainer>
+      <ExperienceBar />
 
-        <S.RightContainer>
-          <ChallengeBox />
-        </S.RightContainer>
-      </S.Section>
-    </CountdownProvider>
-  </S.Wrapper>
+      <CountdownProvider>
+        <S.Section>
+          <S.LeftContainer>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </S.LeftContainer>
+
+          <S.RightContainer>
+            <ChallengeBox />
+          </S.RightContainer>
+        </S.Section>
+      </CountdownProvider>
+    </S.Wrapper>
+  </ChallengesProvider>
 )
 
 export default HomeTemplate

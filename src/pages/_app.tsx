@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app'
 import React, { useState } from 'react'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
-import { ChallengesProvider } from 'contexts/ChallengesContext'
 
 import GlobalStyles from 'styles/global'
 import { combineTheme, dark, light } from 'styles/themes'
@@ -17,11 +16,9 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider theme={theme}>
-      <ChallengesProvider>
-        <GlobalStyles />
-        <Header toggleTheme={toggleTheme} />
-        <Component {...pageProps} />
-      </ChallengesProvider>
+      <GlobalStyles />
+      <Header toggleTheme={toggleTheme} />
+      <Component {...pageProps} />
     </ThemeProvider>
   )
 }
