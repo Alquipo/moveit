@@ -4,7 +4,9 @@ import { ChallengesContext } from 'contexts/ChallengesContext'
 import * as S from './styles'
 
 const ChallengeBox = () => {
-  const { activeChallenge, resetChallenge } = useContext(ChallengesContext)
+  const { activeChallenge, resetChallenge, completeChallenge } = useContext(
+    ChallengesContext
+  )
 
   return (
     <S.Wrapper>
@@ -25,7 +27,11 @@ const ChallengeBox = () => {
             <S.ChallengeButton failed type="button" onClick={resetChallenge}>
               Falhei
             </S.ChallengeButton>
-            <S.ChallengeButton succeeded type="button">
+            <S.ChallengeButton
+              succeeded
+              type="button"
+              onClick={completeChallenge}
+            >
               Completei
             </S.ChallengeButton>
           </footer>

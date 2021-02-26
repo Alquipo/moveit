@@ -1,5 +1,6 @@
 import { ChallengesContext } from 'contexts/ChallengesContext'
 import { useContext } from 'react'
+
 import * as S from './styles'
 
 const ExperienceBar = () => {
