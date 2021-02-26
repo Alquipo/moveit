@@ -22,6 +22,7 @@ type ChallengesContextData = {
   challengesCompleted: number
   activeChallenge: ChallengeProps
   experienceToNextLevel: number
+  isLevelModalOpen: boolean
   levelUp: () => void
   startNewChallenge: () => void
   resetChallenge: () => void
@@ -115,6 +116,7 @@ export function ChallengesProvider({
         challengesCompleted,
         activeChallenge,
         experienceToNextLevel,
+        isLevelModalOpen,
         startNewChallenge,
         levelUp,
         resetChallenge,

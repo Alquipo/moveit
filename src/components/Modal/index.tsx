@@ -7,7 +7,7 @@ const Modal = () => {
 
   return (
     <S.Overlay>
-      <S.Wrapper>
+      <S.Wrapper aria-label="modal">
         <header>{level}</header>
 
         <strong>Parabéns</strong>
