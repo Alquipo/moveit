@@ -72,7 +72,7 @@ export const CountdownButton = styled.button<ButtonProps>`
     font-size: 1.25rem;
     font-weight: ${theme.font.bold};
 
-    outline: 0;
+    outline-color: ${theme.colors.blue};
 
     svg {
       width: 2rem;
@@ -104,14 +104,16 @@ export const CountdownButton = styled.button<ButtonProps>`
     css`
       background-color: ${theme.colors.backgroundBox};
       color: ${theme.colors.text};
+      outline-color: ${theme.colors.backgroundBox};
 
       transition: background-color 0.3s, color 0.3s;
 
       &:not(:disabled):hover {
         background-color: ${theme.colors.red};
         color: ${theme.colors.backgroundBox};
+        outline-color: ${theme.colors.red};
 
-        transition: background-color 0.3s, color 0.3s;
+        transition: background-color 0.3s, color 0.3s, outline-color 0.3s;
       }
     `}
   `}
