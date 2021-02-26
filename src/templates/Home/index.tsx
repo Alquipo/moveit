@@ -1,3 +1,5 @@
+import { CountdownProvider } from 'contexts/CountdownContext'
+
 import SEO from 'components/SEO'
 import CompletedChallenges from 'components/CompletedChallenges'
 import Countdown from 'components/Countdown'
@@ -18,17 +20,19 @@ const HomeTemplate = () => (
 
     <ExperienceBar />
 
-    <S.Section>
-      <S.LeftContainer>
-        <Profile />
-        <CompletedChallenges />
-        <Countdown />
-      </S.LeftContainer>
+    <CountdownProvider>
+      <S.Section>
+        <S.LeftContainer>
+          <Profile />
+          <CompletedChallenges />
+          <Countdown />
+        </S.LeftContainer>
 
-      <S.RightContainer>
-        <ChallengeBox />
-      </S.RightContainer>
-    </S.Section>
+        <S.RightContainer>
+          <ChallengeBox />
+        </S.RightContainer>
+      </S.Section>
+    </CountdownProvider>
   </S.Wrapper>
 )
 

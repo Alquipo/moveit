@@ -2,11 +2,23 @@ import { useContext } from 'react'
 import { ChallengesContext } from 'contexts/ChallengesContext'
 
 import * as S from './styles'
+import { CountdownContext } from 'contexts/CountdownContext'
 
 const ChallengeBox = () => {
   const { activeChallenge, resetChallenge, completeChallenge } = useContext(
     ChallengesContext
   )
+  const { resetCountdown } = useContext(CountdownContext)
+
+  function handleChallengeSucceeded() {
+    completeChallenge()
+    resetCountdown()
+  }
+
+  function handleChallengeFailed() {
+    resetChallenge()
+    resetCountdown()
+  }
 
   return (
     <S.Wrapper>
@@ -24,13 +36,17 @@ const ChallengeBox = () => {
           </main>
 
           <footer>
-            <S.ChallengeButton failed type="button" onClick={resetChallenge}>
+            <S.ChallengeButton
+              failed
+              type="button"
+              onClick={handleChallengeFailed}
+            >
               Falhei
             </S.ChallengeButton>
             <S.ChallengeButton
               succeeded
               type="button"
-              onClick={completeChallenge}
+              onClick={handleChallengeSucceeded}
             >
               Completei
             </S.ChallengeButton>
