@@ -6,7 +6,7 @@ export default {
   component: Tooltip
 } as Meta
 
-export const Default: Story = (args) => (
+export const Default: Story = () => (
   <div
     style={{
       display: 'flex',
@@ -14,6 +14,6 @@ export const Default: Story = (args) => (
       marginTop: '10rem'
     }}
   >
-    <Tooltip {...args}>asjdhkjsa</Tooltip>
+    <Tooltip text="safasd">asjdhkjsa</Tooltip>
   </div>
 )
