@@ -6,7 +6,7 @@ type TooltipProps = {
   text: string
 }
 const Tooltip = ({ children, text }: TooltipProps) => (
-  <S.Wrapper data-tip={text} tabIndex={1}>
+  <S.Wrapper data-text={text} tabIndex={1}>
     {children}
   </S.Wrapper>
 )
