@@ -20,22 +20,6 @@ export const Wrapper = styled.aside`
     width: 5rem;
     padding: 2.3rem 2.2rem;
 
-    /* > div button {
-      &:not(:first-child) {
-        margin-top: 10px;
-      }
-    } */
-
-    /* button {
-      border: 0;
-      background: transparent;
-      outline-color: ${theme.colors.backgroundLight};
-
-      svg {
-        color: ${theme.colors.text};
-      }
-    } */
-
     @media (max-width: 800px) {
       flex-direction: row;
 
