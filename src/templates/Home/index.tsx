@@ -1,6 +1,6 @@
 import { useTheme } from 'contexts/ThemeContext'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { Github } from '@styled-icons/bootstrap/Github'
 import * as S from './styles'
