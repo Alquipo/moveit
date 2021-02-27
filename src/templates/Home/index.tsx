@@ -60,7 +60,7 @@ const HomeTemplate = () => {
                 placeholder="Digite seu usuário"
               />
 
-              {!button ? (
+              {username ? (
                 <S.ButtonLogin
                   type="submit"
                   onClick={handleUsername}
