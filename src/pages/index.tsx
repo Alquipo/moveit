@@ -1,19 +1,12 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
+import HomeTemplate from 'templates/Home'
 
-import Dashboard, { DashboardTemplateProps } from 'templates/Dashboard'
-
-export default function Home(props: DashboardTemplateProps) {
-  return <Dashboard {...props} />
+export default function Home() {
+  return <HomeTemplate />
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies
-
+export const getStaticProps: GetStaticProps = async () => {
   return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted)
-    }
+    props: {}
   }
 }

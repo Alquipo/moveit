@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
     }
 
     @media (max-width: 800px) {
-      margin-top: 4rem;
+      margin-top: 5rem;
     }
   `}
 `

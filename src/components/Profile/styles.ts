@@ -3,12 +3,12 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: flex;
-
     align-items: center;
+
     color: ${theme.colors.text};
     transition: color 0.3s;
 
-    div:last-child {
+    div {
       margin-left: 1.5rem;
 
       strong {
@@ -25,6 +25,23 @@ export const Wrapper = styled.div`
         img {
           margin-right: 0.5rem;
         }
+      }
+    }
+
+    svg {
+      margin-left: auto;
+      cursor: pointer;
+      color: ${({ theme }) => theme.colors.title};
+
+      &:hover {
+        color: ${({ theme }) => theme.colors.red};
+        transition: color 0.3s;
+      }
+    }
+
+    @media (max-width: 800px) {
+      svg {
+        width: 2.2rem;
       }
     }
   `}

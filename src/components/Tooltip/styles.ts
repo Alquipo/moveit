@@ -44,7 +44,7 @@ export const Wrapper = styled.div`
       bottom: 117%;
       color: ${theme.colors.text};
       content: attr(data-tip);
-      margin-left: -4rem;
+      margin-left: -8rem;
       padding: 1em;
       transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
       transform: scale(0.6) translateY(50%);

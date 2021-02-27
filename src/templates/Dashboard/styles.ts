@@ -5,13 +5,14 @@ export const Wrapper = styled.div`
   height: 100vh;
   max-width: 992px;
   margin: 0 auto;
-  padding: 2.5rem 2rem 2.5rem 6.5rem;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
 
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     padding: 1rem;
+    padding-left: 6.5rem;
   }
 `
 
