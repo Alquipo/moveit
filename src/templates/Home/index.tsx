@@ -12,16 +12,8 @@ const HomeTemplate = () => {
   const { ToggleTheme } = useTheme()
 
   const [username, setUsername] = useState('')
-  const [button, setButton] = useState(false)
 
   // const [play] = useSound(theme.title === 'dark' ? turnOffSound : turnOnSound)
-  useEffect(() => {
-    if (username === null || username === '') {
-      setButton(true)
-    } else {
-      setButton(false)
-    }
-  }, [username])
 
   function handleClick() {
     ToggleTheme()
