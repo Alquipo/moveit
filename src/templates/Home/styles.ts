@@ -25,23 +25,8 @@ export const LeftSide = styled.div`
   display: flex;
   width: 100%;
 
-  /* button {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border: 0;
-    background: transparent;
-    color: ${({ theme }) => theme.colors.backgroundBox};
-  } */
   @media (max-width: 1100px) {
     display: none;
-
-    /* button {
-      left: unset;
-      right: 0;
-      top: 0;
-      bottom: unset;
-    } */
   }
 `
 
@@ -118,15 +103,14 @@ export const LoginContainer = styled.form`
   input {
     border: 0;
     background: linear-gradient(
-      100deg,
+      120deg,
       ${({ theme }) => theme.colors.inputBackground},
       transparent
     );
     font-size: 1.3rem;
     padding: 1.65rem;
-
-    margin-right: 3px;
-    border-radius: 5px;
+    outline: none;
+    border-radius: 5px 0 0 5px;
 
     color: ${({ theme }) => theme.colors.backgroundBox};
 
@@ -135,16 +119,6 @@ export const LoginContainer = styled.form`
       opacity: 0.8;
     }
   }
-
-  /* button {
-    padding: 1.3rem;
-    font-size: 2rem;
-    background: ${({ theme }) => theme.colors.green};
-    border: 0;
-    color: ${({ theme }) => theme.colors.backgroundBox};
-    border-radius: 0 5px 5px 0;
-    width: max-content;
-  } */
 
   @media (max-width: 1100px) {
     input {
@@ -157,7 +131,7 @@ type ButtonLoginProps = {
 }
 export const ButtonLogin = styled.button<ButtonLoginProps>`
   ${({ theme, isSubmit }) => css`
-    padding: 1.3rem;
+    padding: 1.22rem;
     font-size: 2rem;
     border: 0;
     color: ${theme.colors.backgroundBox};

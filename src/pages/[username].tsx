@@ -13,7 +13,6 @@ export const getServerSideProps: GetServerSideProps = async ({
   const { username } = params
   const response = await fetch(`https://api.github.com/users/${username}`)
   const user = await response.json()
-  console.log(user)
 
   return {
     props: {

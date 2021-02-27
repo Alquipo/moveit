@@ -1,10 +1,21 @@
 import Switch from 'react-switch'
+import { useTheme } from 'contexts/ThemeContext'
+// import { useRouter } from 'next/router'
 
 import * as S from './styles'
-import { useTheme } from 'contexts/ThemeContext'
 
 const SideBar = () => {
   const { ToggleTheme, theme } = useTheme()
+
+  // const { push } = useRouter()
+
+  // function handleGoExercise() {
+  //   push('/dashboard')
+  // }
+
+  // function handleGoLeaderboard() {
+  //   push('/leaderboard')
+  // }
 
   return (
     <S.Wrapper>
@@ -28,6 +39,11 @@ const SideBar = () => {
           fill={theme.colors.blue}
         />
       </svg>
+
+      <S.WrapperNavigation>
+        <S.HomeIcon />
+        <S.AwardIcon />
+      </S.WrapperNavigation>
 
       <Switch
         checked={theme.title === 'dark'}

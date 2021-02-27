@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components'
+import { HomeAlt } from '@styled-icons/boxicons-regular/HomeAlt'
+import { Award } from '@styled-icons/boxicons-regular/Award'
 
 export const Wrapper = styled.aside`
   ${({ theme }) => css`
@@ -36,4 +38,37 @@ export const Wrapper = styled.aside`
       }
     }
   `}
+`
+export const WrapperNavigation = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    flex-direction: row;
+  }
+`
+
+const iconsCss = css`
+  ${({ theme }) => css`
+    width: 40px;
+    height: 40px;
+
+    color: ${theme.colors.blue};
+    margin: 1rem;
+
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  `}
+`
+
+export const HomeIcon = styled(HomeAlt)`
+  ${iconsCss}
+`
+export const AwardIcon = styled(Award)`
+  ${iconsCss}
 `
