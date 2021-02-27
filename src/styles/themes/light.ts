@@ -1,5 +1,5 @@
 export default {
-  name: 'Light',
+  title: 'light',
   colors: {
     background: '#F2F3F5',
     backgroundOverlay: 'rgba(242, 243, 245, 0.8)',

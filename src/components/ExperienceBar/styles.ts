@@ -10,6 +10,10 @@ export const Wrapper = styled.div`
     span {
       font-size: 1rem;
     }
+
+    @media (max-width: 800px) {
+      margin-top: 4rem;
+    }
   `}
 `
 export const ExperienceBar = styled.div`

@@ -1,5 +1,5 @@
 export default {
-  name: 'Dark',
+  title: 'dark',
   colors: {
     background: '#121214',
     backgroundOverlay: 'rgba(13, 12, 10, 0.8)',

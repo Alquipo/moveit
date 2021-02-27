@@ -1,9 +1,9 @@
 import { GetServerSideProps } from 'next'
 
-import HomeTemplate, { HomeTemplateProps } from 'templates/Home'
+import Dashboard, { DashboardTemplateProps } from 'templates/Dashboard'
 
-export default function Home(props: HomeTemplateProps) {
-  return <HomeTemplate {...props} />
+export default function Home(props: DashboardTemplateProps) {
+  return <Dashboard {...props} />
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {

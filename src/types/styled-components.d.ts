@@ -2,7 +2,7 @@ import 'styled-components'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    name: string
+    title: string
     colors: {
       background: string
       backgroundOverlay: string
@@ -37,7 +37,7 @@ declare module 'styled-components' {
   }
 
   export interface CustomTheme {
-    name: string
+    title: string
     colors: {
       background: string
       backgroundOverlay: string
