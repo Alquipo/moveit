@@ -99,6 +99,7 @@ export const TitleContainer = styled.div`
 export const LoginContainer = styled.form`
   display: flex;
   align-items: center;
+  justify-content: center;
 
   input {
     border: 0;
@@ -122,7 +123,8 @@ export const LoginContainer = styled.form`
 
   @media (max-width: 1100px) {
     input {
-      /* width: 78%; */
+      width: 77%;
+      margin-left: 1rem;
     }
   }
 `
