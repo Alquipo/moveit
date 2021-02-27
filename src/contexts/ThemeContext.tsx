@@ -16,7 +16,7 @@ export const ThemesProvider: React.FC = ({ children }) => {
   useEffect(() => {
     const themeLocal = localStorage.getItem('@MoveIt:theme')
 
-    setTheme(themeLocal === 'dark' ? combineTheme(dark) : combineTheme(light))
+    setTheme(themeLocal === 'light' ? combineTheme(light) : combineTheme(dark))
   }, [])
 
   const ToggleTheme = () => {
@@ -28,7 +28,6 @@ export const ThemesProvider: React.FC = ({ children }) => {
       setTheme(combineTheme(dark))
     }
   }
-
   return (
     <ThemeContext.Provider value={{ theme, ToggleTheme }}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
