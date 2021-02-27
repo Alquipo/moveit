@@ -122,7 +122,7 @@ export const LoginContainer = styled.form`
 
   @media (max-width: 1100px) {
     input {
-      width: 78%;
+      /* width: 78%; */
     }
   }
 `
