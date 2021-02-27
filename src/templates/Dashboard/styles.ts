@@ -11,8 +11,12 @@ export const Wrapper = styled.div`
   flex-direction: column;
 
   @media (max-width: 1100px) {
-    padding: 1rem;
-    padding-left: 6.5rem;
+    margin-left: 5rem;
+    padding: 2rem;
+  }
+  @media (max-width: 800px) {
+    padding: 2rem;
+    margin-left: 0;
   }
 `
 
@@ -25,9 +29,10 @@ export const Section = styled.section`
 
   @media (max-width: 992px) {
     gap: 1.25rem;
+    margin-top: 2rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
     margin-top: 3.5rem;
     grid-template-columns: auto;
   }

@@ -7,8 +7,9 @@ export const Wrapper = styled.div`
     color: ${theme.colors.text};
     transition: color 0.3s;
 
-    span {
+    span:last-child {
       font-size: 1rem;
+      width: 4rem;
     }
 
     @media (max-width: 800px) {
