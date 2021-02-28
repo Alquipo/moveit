@@ -11,22 +11,8 @@ import SideBar from 'components/SideBar'
 import * as S from './styles'
 import ChallengeBox from 'components/ChallengeBox'
 
-export type DashboardTemplateProps = {
-  level: number
-  currentExperience: number
-  challengesCompleted: number
-}
-
-const DashboardTemplate = ({
-  challengesCompleted,
-  currentExperience,
-  level
-}: DashboardTemplateProps) => (
-  <ChallengesProvider
-    challengesCompleted={challengesCompleted}
-    currentExperience={currentExperience}
-    level={level}
-  >
+const DashboardTemplate = () => (
+  <ChallengesProvider>
     <S.Wrapper>
       <SEO
         title="Dashboard"

@@ -1,15 +1,18 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 import challenges from 'data/challenges.json'
+import axios from 'axios'
+import { useAuth } from './AuthContext'
+
 import Modal from 'components/Modal'
 
 type ChallengesProviderProps = {
   children: ReactNode
-  level: number
-  currentExperience: number
-  challengesCompleted: number
+  // level: number
+  // currentExperience: number
+  // challengesCompleted: number
 }
 
 type ChallengeProps = {
@@ -34,22 +37,18 @@ type ChallengesContextData = {
 
 export const ChallengesContext = createContext({} as ChallengesContextData)
 
-export function ChallengesProvider({
-  children,
-  ...rest
-}: ChallengesProviderProps) {
-  const [level, setLevel] = useState(rest.level ?? 1)
-  const [currentExperience, setCurrentExperience] = useState(
-    rest.currentExperience ?? 0
-  )
-  const [challengesCompleted, setChallengesCompleted] = useState(
-    rest.challengesCompleted ?? 0
-  )
+export function ChallengesProvider({ children }: ChallengesProviderProps) {
+  const { userData } = useAuth()
+
+  const [level, setLevel] = useState(1)
+  const [currentExperience, setCurrentExperience] = useState(0)
+  const [challengesCompleted, setChallengesCompleted] = useState(0)
 
   const [activeChallenge, setActiveChallenge] = useState(null)
   const [isLevelModalOpen, setIsLevelModalOpen] = useState(false)
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
+  const [loading, setLoading] = useState(true)
 
   //pedindo permissão
   // useEffect(() => {
@@ -57,11 +56,44 @@ export function ChallengesProvider({
   // }, [])
 
   //salvando Cookies
+  // useEffect(() => {
+  //   Cookies.set('level', String(level))
+  //   Cookies.set('currentExperience', String(currentExperience))
+  //   Cookies.set('challengesCompleted', String(challengesCompleted))
+  // }, [level, currentExperience, challengesCompleted])
+
   useEffect(() => {
-    Cookies.set('level', String(level))
-    Cookies.set('currentExperience', String(currentExperience))
-    Cookies.set('challengesCompleted', String(challengesCompleted))
-  }, [level, currentExperience, challengesCompleted])
+    if (loading) {
+      axios
+        .get(`/api/user/${userData?.email}`)
+        .then((response) => {
+          setChallengesCompleted(response.data.user.challengesCompleted || 0)
+          setCurrentExperience(response.data.user.currentExp || 0)
+          setLevel(response.data.user.level || 1)
+        })
+        .catch((e) => {
+          console.log('Erro ao buscar dados do user', e)
+        })
+        .finally(() => {
+          setLoading(false)
+        })
+    } else {
+      axios.post(`/api/user`, {
+        level: level || 1,
+        currentExp: currentExperience,
+        email: userData?.email,
+        challengesCompleted,
+        photo: userData.photo
+      })
+    }
+  }, [
+    level,
+    currentExperience,
+    challengesCompleted,
+    loading,
+    userData?.email,
+    userData.photo
+  ])
 
   function levelUp() {
     setLevel(level + 1)
@@ -155,7 +187,7 @@ export function ChallengesProvider({
         closeLevelUpModal
       }}
     >
-      {children}
+      {!loading && children}
       {isLevelModalOpen && <Modal />}
     </ChallengesContext.Provider>
   )
