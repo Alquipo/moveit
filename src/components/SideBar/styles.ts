@@ -1,6 +1,4 @@
 import styled, { css } from 'styled-components'
-import { HomeAlt } from '@styled-icons/boxicons-regular/HomeAlt'
-import { Award } from '@styled-icons/boxicons-regular/Award'
 
 export const Wrapper = styled.aside`
   ${({ theme }) => css`
@@ -12,7 +10,7 @@ export const Wrapper = styled.aside`
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    padding: 0 30px;
+    /* padding: 0 30px; */
 
     position: absolute;
     left: 0;
@@ -34,7 +32,7 @@ export const Wrapper = styled.aside`
       height: 3rem;
 
       svg {
-        width: 2.2rem;
+        width: 3rem;
       }
     }
   `}
@@ -49,26 +47,97 @@ export const WrapperNavigation = styled.div`
   }
 `
 
-const iconsCss = css`
-  ${({ theme }) => css`
+export const LinkMenu = styled.a`
+  cursor: pointer;
+  width: 100%;
+  margin: 0.25rem 0;
+  font-weight: 600;
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
     width: 40px;
     height: 40px;
-
-    color: ${theme.colors.blue};
-    margin: 1rem;
-
-    cursor: pointer;
+    fill: ${({ theme }) => theme.colors.blue};
     transition: all 0.2s;
+  }
+  position: relative;
+  transition: all 0.2s;
 
-    &:hover {
-      opacity: 0.7;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    top: 0;
+    left: -19px;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    background: ${({ theme }) => theme.colors.blue};
+    transition: all 0.3s;
+  }
+  @media (max-width: 800px) {
+    margin: 0 1rem;
+
+    &:after {
+      left: 0;
+      top: 5px;
+      width: 100%;
+      height: 5px;
+      border-radius: 0 0 10px 10px;
     }
-  `}
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.blue};
+    > svg {
+      fill: ${({ theme }) => theme.colors.blue};
+    }
+  }
 `
 
-export const HomeIcon = styled(HomeAlt)`
-  ${iconsCss}
-`
-export const AwardIcon = styled(Award)`
-  ${iconsCss}
-`
+// const iconsCss = css`
+//   ${({ theme }) => css`
+//     width: 40px;
+//     height: 40px;
+
+//     color: ${theme.colors.blue};
+//     margin: 1rem;
+
+//     cursor: pointer;
+//     transition: all 0.2s;
+
+//     &:hover {
+//       opacity: 0.7;
+//     }
+//   `}
+// `
+
+// export const HomeIcon = styled(HomeAlt)`
+//   ${iconsCss}
+
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     width: 10px;
+//     top: 0;
+//     left: -4px;
+//     height: 100%;
+//     border-radius: 5px;
+//     background: ${({ theme }) => theme.colors.blue};
+//     transition: all 0.2s;
+//   }
+//   @media (max-width: 720px) {
+//     &:after {
+//       left: 0;
+//       top: -8px;
+//       width: 100%;
+//       height: 10px;
+//     }
+//   }
+// `
+// export const AwardIcon = styled(Award)`
+//   ${iconsCss}
+// `
