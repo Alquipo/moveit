@@ -1,30 +1,17 @@
 import { useTheme } from 'contexts/ThemeContext'
-import { useRouter } from 'next/router'
-import React, { useState } from 'react'
 
 import { Github } from '@styled-icons/bootstrap/Github'
 import * as S from './styles'
 import Tooltip from 'components/Tooltip'
 import Logo from 'components/Logo'
 import SEO from 'components/SEO'
+import { useAuth } from 'contexts/AuthContext'
 
 const HomeTemplate = () => {
-  const { push } = useRouter()
   const { ToggleTheme } = useTheme()
 
-  const [username, setUsername] = useState('')
+  const { loginWithGitHub } = useAuth()
 
-  // const [play] = useSound(theme.title === 'dark' ? turnOffSound : turnOnSound)
-
-  function handleClick() {
-    ToggleTheme()
-    // play()
-  }
-
-  function handleUsername(e) {
-    e.preventDefault()
-    push(`/${username}`)
-  }
   return (
     <S.Wrapper>
       <SEO
@@ -43,7 +30,7 @@ const HomeTemplate = () => {
             <strong>Bem-vindo</strong>
 
             <S.TitleContainer>
-              <button type="button" onClick={handleClick}>
+              <button type="button" onClick={ToggleTheme}>
                 <Tooltip text="Clique aqui para mudar o tema">
                   <Github size={55} />
                 </Tooltip>
@@ -52,14 +39,14 @@ const HomeTemplate = () => {
               <span>Faça login com seu Github para começar</span>
             </S.TitleContainer>
 
-            <S.LoginContainer onSubmit={handleUsername}>
-              <input
+            <S.LoginContainer>
+              {/* <input
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Digite seu usuário"
-              />
+              /> */}
 
-              {username ? (
+              {/* {username ? (
                 <S.ButtonLogin
                   type="submit"
                   onClick={handleUsername}
@@ -67,7 +54,11 @@ const HomeTemplate = () => {
                 >{` -> `}</S.ButtonLogin>
               ) : (
                 <S.ButtonLogin>{` -> `}</S.ButtonLogin>
-              )}
+              )} */}
+
+              <button type="button" onClick={loginWithGitHub}>
+                Entrar com Github <Github color="#FFF" size={32} />
+              </button>
             </S.LoginContainer>
           </div>
         </S.RightSide>

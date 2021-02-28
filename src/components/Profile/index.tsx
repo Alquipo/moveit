@@ -3,20 +3,20 @@ import { useContext } from 'react'
 import Link from 'next/link'
 import { LogOut } from '@styled-icons/ionicons-outline/LogOut'
 import * as S from './styles'
+import { useAuth } from 'contexts/AuthContext'
 
-export type ProfileProps = {
-  name: string
-  avatarUrl: string
-}
-const Profile = ({ avatarUrl, name }: ProfileProps) => {
+const Profile = () => {
   const { level } = useContext(ChallengesContext)
+  const { userData } = useAuth()
+
+  const { logout } = useAuth()
 
   return (
     <S.Wrapper>
-      <S.ProfileImage src={avatarUrl} alt={name} />
+      <S.ProfileImage src={userData?.photo} alt={userData?.name} />
 
       <div>
-        <strong>{name}</strong>
+        <strong>{userData?.name}</strong>
         <p>
           <img src="icons/level.svg" alt="Level" />
           Level {level}
@@ -24,7 +24,7 @@ const Profile = ({ avatarUrl, name }: ProfileProps) => {
       </div>
 
       <Link href="/">
-        <LogOut size={40} />
+        <LogOut size={40} role="button" onClick={logout} />
       </Link>
     </S.Wrapper>
   )
