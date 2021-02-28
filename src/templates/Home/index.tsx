@@ -1,11 +1,12 @@
 import { useTheme } from 'contexts/ThemeContext'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { Github } from '@styled-icons/bootstrap/Github'
 import * as S from './styles'
 import Tooltip from 'components/Tooltip'
 import Logo from 'components/Logo'
+import SEO from 'components/SEO'
 
 const HomeTemplate = () => {
   const { push } = useRouter()
@@ -26,6 +27,12 @@ const HomeTemplate = () => {
   }
   return (
     <S.Wrapper>
+      <SEO
+        title="Home"
+        image="logo-full.svg"
+        description="A app to make you move."
+        shouldIndexPage
+      />
       <section>
         <S.LeftSide>
           <img src="/img/Logo-background.svg" alt="" />

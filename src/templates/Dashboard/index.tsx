@@ -31,7 +31,7 @@ const DashboardTemplate = ({
   >
     <S.Wrapper>
       <SEO
-        title="Inicio"
+        title="Dashboard"
         image="logo-full.svg"
         description="A app to make you move."
         shouldIndexPage
