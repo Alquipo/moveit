@@ -1,7 +1,7 @@
 import Switch from 'react-switch'
 import { useTheme } from 'contexts/ThemeContext'
 import { HomeAlt } from '@styled-icons/boxicons-regular/HomeAlt'
-import { Award } from '@styled-icons/boxicons-regular/Award'
+// import { Award } from '@styled-icons/boxicons-regular/Award'
 // import { useRouter } from 'next/router'
 
 import * as S from './styles'
@@ -47,9 +47,9 @@ const SideBar = () => {
           <HomeAlt />
         </S.LinkMenu>
 
-        <S.LinkMenu>
+        {/* <S.LinkMenu>
           <Award />
-        </S.LinkMenu>
+        </S.LinkMenu> */}
       </S.WrapperNavigation>
 
       <Switch
