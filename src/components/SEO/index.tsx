@@ -31,10 +31,15 @@ export default function SEO({
       <meta name="keywords" content="alquipo, exercise" />
       <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
 
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=no"
+      />
+
       <meta name="MobileOptimized" content="320" />
       <meta name="HandheldFriendly" content="True" />
-      <meta name="theme-color" content="#f2f3f5" />
-      <meta name="msapplication-TileColor" content="#f2f3f5" />
+      <meta name="theme-color" content="#121214" />
+      <meta name="msapplication-TileColor" content="#121214" />
       <meta name="referrer" content="no-referrer-when-downgrade" />
       <meta name="google" content="notranslate" />
 
