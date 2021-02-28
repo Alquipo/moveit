@@ -98,8 +98,6 @@ export const TitleContainer = styled.div`
 
 export const LoginContainer = styled.form`
   display: flex;
-  align-items: center;
-  justify-content: center;
 
   input {
     border: 0;
@@ -125,6 +123,8 @@ export const LoginContainer = styled.form`
     input {
       width: 77%;
       margin-left: 1rem;
+      align-items: center;
+      justify-content: center;
     }
   }
 `
