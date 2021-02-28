@@ -23,6 +23,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-switch": "^6.0.0",
+    "react-toastify": "^7.0.3",
     "styled-components": "^5.2.1",
     "styled-icons": "^10.28.0",
     "styled-media-query": "^2.1.2"

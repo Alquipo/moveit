@@ -1,4 +1,6 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
+import { toast } from 'react-toastify'
+
 import Cookies from 'js-cookie'
 import challenges from 'data/challenges.json'
 import Modal from 'components/Modal'
@@ -50,9 +52,9 @@ export function ChallengesProvider({
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
 
   //pedindo permissão
-  useEffect(() => {
-    Notification.requestPermission()
-  }, [])
+  // useEffect(() => {
+  //   Notification.requestPermission()
+  // }, [])
 
   //salvando Cookies
   useEffect(() => {
@@ -78,6 +80,13 @@ export function ChallengesProvider({
 
     new Audio('/notification.mp3').play()
 
+    toast.info('Você tem um novo desafio 🎉', {
+      position: 'top-right',
+      autoClose: 3000,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    })
     // if (Notification.permission === 'granted') {
     //   new Notification('Novo desafio 🎉', {
     //     body: `Valendo ${challenge.amount} xp`,
@@ -88,6 +97,13 @@ export function ChallengesProvider({
 
   function resetChallenge() {
     setActiveChallenge(null)
+    toast.warning('Poxa 😥 na próxima você consegue!', {
+      position: 'top-right',
+      autoClose: 4000,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true
+    })
   }
 
   function completeChallenge() {
@@ -101,7 +117,22 @@ export function ChallengesProvider({
 
     if (finalExperience >= experienceToNextLevel) {
       finalExperience = finalExperience - experienceToNextLevel
+      toast.success('Incrível você subiu de level 😍', {
+        position: 'top-right',
+        autoClose: 3000,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true
+      })
       levelUp()
+    } else {
+      toast.success('Mandou bem! 😎', {
+        position: 'top-right',
+        autoClose: 3000,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true
+      })
     }
 
     setCurrentExperience(finalExperience)

@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
       color: ${theme.colors.text};
       transition: background-color 0.3s, color 0.3s;
 
-      overflow: hidden;
+      /* overflow: hidden; */
 
       ${media.lessThan('medium')`
         overflow-x: hidden;
