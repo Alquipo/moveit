@@ -5,7 +5,7 @@ import SEO from 'components/SEO'
 import CompletedChallenges from 'components/CompletedChallenges'
 import Countdown from 'components/Countdown'
 import ExperienceBar from 'components/ExperienceBar'
-import Profile, { ProfileProps } from 'components/Profile'
+import Profile from 'components/Profile'
 import SideBar from 'components/SideBar'
 
 import * as S from './styles'
@@ -15,14 +15,12 @@ export type DashboardTemplateProps = {
   level: number
   currentExperience: number
   challengesCompleted: number
-  user: ProfileProps
 }
 
 const DashboardTemplate = ({
   challengesCompleted,
   currentExperience,
-  level,
-  user
+  level
 }: DashboardTemplateProps) => (
   <ChallengesProvider
     challengesCompleted={challengesCompleted}
@@ -43,7 +41,7 @@ const DashboardTemplate = ({
       <CountdownProvider>
         <S.Section>
           <S.LeftContainer>
-            <Profile {...user} />
+            <Profile />
             <CompletedChallenges />
             <Countdown />
           </S.LeftContainer>
