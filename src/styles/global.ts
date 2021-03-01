@@ -28,10 +28,7 @@ const GlobalStyles = createGlobalStyle`
       border-radius: 1rem;
 
     }
-    ::-webkit-scrollbar-thumb:hover {
-     background: ${theme.colors.background};
 
-    }
 
     @media (max-width: 1080px) {
       html {

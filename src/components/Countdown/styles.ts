@@ -108,6 +108,40 @@ export const CountdownButton = styled.button<ButtonProps>`
 
       transition: background-color 0.3s, color 0.3s;
 
+      position: relative;
+      border-bottom: 4px solid ${theme.colors.backgroundBox};
+
+      @keyframes roundtime {
+        to {
+          transform: scaleX(1);
+        }
+      }
+
+      &:before {
+        content: '';
+        width: 100%;
+        transform: scaleX(0);
+        display: block;
+        margin: 0;
+        position: absolute;
+        height: 5px;
+        background: ${theme.colors.green};
+        bottom: -5px;
+        left: 0;
+        border-radius: 0 0 5px 5px;
+        animation: roundtime calc(3 * 1s) linear forwards;
+        transform-origin: left center;
+      }
+
+      /* &:not(:disabled):hover {
+          background: var(--red);
+          color: var(--white);
+          border-color: var(--red);
+          &:before {
+            background: var(--red);
+          }
+        } */
+
       &:not(:disabled):hover {
         background-color: ${theme.colors.red};
         color: ${theme.colors.backgroundBox};
