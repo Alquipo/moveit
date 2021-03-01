@@ -171,9 +171,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     setTotalExperience(totalExperience + amount)
     setActiveChallenge(null)
     setChallengesCompleted(challengesCompleted + 1)
-    console.log(finalExperience)
   }
-  console.log(totalExperience)
   return (
     <ChallengesContext.Provider
       value={{

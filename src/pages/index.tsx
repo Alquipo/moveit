@@ -7,5 +7,12 @@ export default function Home() {
   const { isLogged } = useAuth()
   const router = useRouter()
 
-  return <>{isLogged ? router.push('/dashboard') : <HomeTemplate />}</>
+  return (
+    <>
+      {isLogged ? router.push('/dashboard') : <HomeTemplate />}
+      {/* {userData === null ? <HomeTemplate /> : <DashboardTemplate />} */}
+
+      {/* {userData === null && <HomeTemplate />} */}
+    </>
+  )
 }
