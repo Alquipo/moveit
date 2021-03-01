@@ -18,6 +18,7 @@ const ExperienceBar = () => {
         <S.ExperienceBarProgress style={{ width: `${percentToNextLevel}%` }} />
 
         <S.CurrentExperience style={{ left: `${percentToNextLevel}%` }}>
+          <b>^</b>
           {currentExperience === 0 ? null : `${currentExperience} xp`}
         </S.CurrentExperience>
       </S.ExperienceBar>

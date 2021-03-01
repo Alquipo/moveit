@@ -10,6 +10,9 @@ export const Wrapper = styled.div`
     span:last-child {
       font-size: 1rem;
       width: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   `}
 `
@@ -35,4 +38,8 @@ export const CurrentExperience = styled.span`
   position: absolute;
   top: 12px;
   transform: translateX(-50%);
+
+  b {
+    color: ${({ theme }) => theme.colors.blue};
+  }
 `
