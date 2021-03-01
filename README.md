@@ -100,6 +100,7 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
     -Adicionado storybook para os component;
     -Adicionado opção de PWA na aplicação;
     -Adicionado Ícones para representar os botões;
+    -Adicionado uma SideBar
     -Adicionado component para SEO;
     -Efetuado diversos ajustes no designer da aplicação;
     -Efetuado ajustes para o mobile e PWA;

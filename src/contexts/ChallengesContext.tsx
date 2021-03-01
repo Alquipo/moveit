@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, ReactNode, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 
@@ -68,7 +69,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   useEffect(() => {
     if (loading) {
       axios
-        .get(`/api/user/${userData?.email}`)
+        .get(`/api/user/${userData.email}`)
         .then((response) => {
           setChallengesCompleted(response.data.user.challengesCompleted || 0)
           setCurrentExperience(response.data.user.currentExp || 0)
@@ -92,16 +93,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         name: userData?.name
       })
     }
-  }, [
-    level,
-    currentExperience,
-    challengesCompleted,
-    loading,
-    userData?.email,
-    userData?.photo,
-    totalExperience,
-    userData?.name
-  ])
+  }, [level, currentExperience, challengesCompleted, loading, totalExperience])
 
   function levelUp() {
     setLevel(level + 1)
