@@ -74,7 +74,7 @@ export default async function (request: NowRequest, response: NowResponse) {
     return new Promise((resolve, reject) => {
       collection
         .find()
-        .sort({ level: -1 })
+        .sort({ totalExp: -1 })
         .toArray((err, docs) => {
           if (err)
             return response

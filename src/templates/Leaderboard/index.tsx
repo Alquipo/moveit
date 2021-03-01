@@ -8,6 +8,7 @@ export type LeaderboardTemplateProps = {
   users: UserProps[]
 }
 const LeaderboardTemplate = ({ users }: LeaderboardTemplateProps) => {
+  console.log(users)
   return (
     <S.Wrapper>
       <SEO
@@ -31,7 +32,7 @@ const LeaderboardTemplate = ({ users }: LeaderboardTemplateProps) => {
               <strong>Experiência</strong>
             </div>
           </S.RankingTitle>
-          <div className="ranking-list">
+          <div>
             {users.map((user, i) => (
               <LeaderboardUser key={user._id} position={i} user={user} />
             ))}

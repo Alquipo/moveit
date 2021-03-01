@@ -22,7 +22,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  /* overflow-y: auto; */
+  overflow-y: auto;
 
   > h1 {
     color: ${({ theme }) => theme.colors.title};
@@ -34,7 +34,7 @@ export const Ranking = styled.div`
   flex: 1;
   margin-top: 2.5rem;
 
-  .ranking-list {
+  > div {
     flex: 1;
   }
 `
