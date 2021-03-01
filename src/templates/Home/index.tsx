@@ -36,7 +36,7 @@ const HomeTemplate = () => {
                 </Tooltip>
               </button>
 
-              <span>Faça login com seu Github para começar</span>
+              <span>Faça login com o Github para começar</span>
             </S.TitleContainer>
 
             <S.LoginContainer>
@@ -56,9 +56,9 @@ const HomeTemplate = () => {
                 <S.ButtonLogin>{` -> `}</S.ButtonLogin>
               )} */}
 
-              <button type="button" onClick={loginWithGitHub}>
-                Entrar com Github <Github color="#FFF" size={32} />
-              </button>
+              <S.ButtonLogin type="button" onClick={loginWithGitHub}>
+                <Github color="#FFF" size={32} /> Sign in with Github
+              </S.ButtonLogin>
             </S.LoginContainer>
           </div>
         </S.RightSide>

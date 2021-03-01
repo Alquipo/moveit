@@ -133,7 +133,19 @@ type ButtonLoginProps = {
 }
 export const ButtonLogin = styled.button<ButtonLoginProps>`
   ${({ theme, isSubmit }) => css`
-    padding: 1.22rem;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    border: 0;
+    color: ${theme.colors.text};
+    border-radius: 10px;
+    background: ${theme.colors.backgroundBox};
+
+    svg {
+      /* color: ${theme.colors.blue}; */
+      fill: ${theme.colors.blue};
+    }
+
+    /* padding: 1.22rem;
     font-size: 2rem;
     border: 0;
     color: ${theme.colors.backgroundBox};
@@ -144,6 +156,6 @@ export const ButtonLogin = styled.button<ButtonLoginProps>`
     ${isSubmit &&
     css`
       background: ${theme.colors.green};
-    `}
+    `} */
   `}
 `

@@ -29,6 +29,7 @@ export const Section = styled.section`
   grid-template-columns: 1fr 1fr;
   gap: 6.25rem;
   align-content: center;
+  margin-top: 5rem;
 
   @media (max-width: 992px) {
     gap: 1rem;

@@ -49,7 +49,8 @@ export const InfoWrapper = styled.div`
 
   > p {
     color: ${({ theme }) => theme.colors.text};
-    text-align: top;
+    /* margin-left: 20px; */
+
     > strong {
       color: ${({ theme }) => theme.colors.blue};
     }
@@ -58,7 +59,7 @@ export const InfoWrapper = styled.div`
 export const ProfileWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 18rem;
+  /* width: 18rem; */
 
   > strong {
     color: ${({ theme }) => theme.colors.title};
