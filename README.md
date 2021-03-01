@@ -36,9 +36,9 @@
   </a>
 </p>
 
-<h2 align="center">
+<h1 align="center">
   Bem Vindo ao App MoveIt 2.0
-</h2>
+</h1>
 
 <!--
 
