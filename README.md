@@ -128,6 +128,8 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
 ## 🎖 Milestone
 
     -Melhorar a SSR da aplicação
+    -Ajustar autenticação no Mobile
+    -Ajustar designer do app para Mobile
     -Adicionar compartilhar com Redes Sociais
     -Concluir os testes
     -Ajustes no Storybook
