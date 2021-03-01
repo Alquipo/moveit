@@ -13,30 +13,31 @@ import ChallengeBox from 'components/ChallengeBox'
 
 const DashboardTemplate = () => (
   <ChallengesProvider>
+    <SEO
+      title="Dashboard"
+      image="logo-full.svg"
+      description="A app to make you move."
+      shouldIndexPage
+    />
     <S.Wrapper>
-      <SEO
-        title="Dashboard"
-        image="logo-full.svg"
-        description="A app to make you move."
-        shouldIndexPage
-      />
       <SideBar />
+      <S.Content>
+        <ExperienceBar />
 
-      <ExperienceBar />
+        <CountdownProvider>
+          <S.Section>
+            <S.LeftContainer>
+              <Profile />
+              <CompletedChallenges />
+              <Countdown />
+            </S.LeftContainer>
 
-      <CountdownProvider>
-        <S.Section>
-          <S.LeftContainer>
-            <Profile />
-            <CompletedChallenges />
-            <Countdown />
-          </S.LeftContainer>
-
-          <S.RightContainer>
-            <ChallengeBox />
-          </S.RightContainer>
-        </S.Section>
-      </CountdownProvider>
+            <S.RightContainer>
+              <ChallengeBox />
+            </S.RightContainer>
+          </S.Section>
+        </CountdownProvider>
+      </S.Content>
     </S.Wrapper>
   </ChallengesProvider>
 )

@@ -24,8 +24,10 @@ export default async function (request: NowRequest, response: NowResponse) {
         level,
         email,
         currentExp,
+        totalExp,
         challengesCompleted,
-        photo
+        photo,
+        name
       } = request.body
 
       const db = await connectToDatabase(process.env.MONGODB_URI)
@@ -37,15 +39,26 @@ export default async function (request: NowRequest, response: NowResponse) {
       if (update) {
         await collection.updateOne(
           { _id: update._id },
-          { $set: { level, currentExp, challengesCompleted, photo } }
+          {
+            $set: {
+              level,
+              currentExp,
+              totalExp,
+              challengesCompleted,
+              photo,
+              name
+            }
+          }
         )
       } else {
         await collection.insertOne({
           level,
           email,
           currentExp,
+          totalExp,
           challengesCompleted,
-          photo
+          photo,
+          name
         })
       }
 

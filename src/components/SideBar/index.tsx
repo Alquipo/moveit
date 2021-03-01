@@ -1,24 +1,18 @@
+import Link from 'next/link'
 import Switch from 'react-switch'
 import { useTheme } from 'contexts/ThemeContext'
 import { HomeAlt } from '@styled-icons/boxicons-regular/HomeAlt'
-// import { Award } from '@styled-icons/boxicons-regular/Award'
-// import { useRouter } from 'next/router'
+
+import { Award } from '@styled-icons/boxicons-regular/Award'
+import { useRouter } from 'next/router'
 
 import * as S from './styles'
 
 const SideBar = () => {
   const { ToggleTheme, theme } = useTheme()
 
-  // const { push } = useRouter()
-
-  // function handleGoExercise() {
-  //   push('/dashboard')
-  // }
-
-  // function handleGoLeaderboard() {
-  //   push('/leaderboard')
-  // }
-
+  const router = useRouter()
+  console.log(router.pathname)
   return (
     <S.Wrapper>
       <svg
@@ -43,13 +37,17 @@ const SideBar = () => {
       </svg>
 
       <S.WrapperNavigation>
-        <S.LinkMenu>
-          <HomeAlt />
-        </S.LinkMenu>
+        <Link href="/dashboard">
+          <S.LinkMenu active={router.pathname === '/dashboard'}>
+            <HomeAlt />
+          </S.LinkMenu>
+        </Link>
 
-        {/* <S.LinkMenu>
-          <Award />
-        </S.LinkMenu> */}
+        <Link href="/dashboard/leaderboard">
+          <S.LinkMenu active={router.pathname === '/dashboard/leaderboard'}>
+            <Award />
+          </S.LinkMenu>
+        </Link>
       </S.WrapperNavigation>
 
       <Switch

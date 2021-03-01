@@ -3,21 +3,24 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   height: 100vh;
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem 2.5rem 2.5rem;
 
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
 
-  @media (max-width: 1100px) {
-    margin-left: 5rem;
-    padding: 2rem;
+  @media (max-width: 720px) {
+    flex-direction: column;
   }
-  @media (max-width: 800px) {
-    padding: 2rem;
-    margin-left: 0;
-  }
+
+  transition: all 0.2s;
+`
+
+export const Content = styled.div`
+  width: 100%;
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
 `
 
 export const Section = styled.section`
@@ -28,16 +31,11 @@ export const Section = styled.section`
   align-content: center;
 
   @media (max-width: 992px) {
-    gap: 1.25rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 3rem;
   }
 
-  @media (max-width: 1100px) {
-    margin-top: 3.5rem;
-    grid-template-columns: auto;
-  }
-
-  @media (max-width: 542px) {
+  @media (max-width: 720px) {
     grid-template-columns: auto;
   }
 `
@@ -50,7 +48,7 @@ export const LeftContainer = styled.div`
 `
 
 export const RightContainer = styled.div`
-  @media (max-width: 800px) {
+  @media (max-width: 720px) {
     margin-bottom: 1rem;
   }
 `

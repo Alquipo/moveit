@@ -24,6 +24,7 @@ type ChallengeProps = {
 type ChallengesContextData = {
   level: number
   currentExperience: number
+  totalExperience: number
   challengesCompleted: number
   activeChallenge: ChallengeProps
   experienceToNextLevel: number
@@ -42,6 +43,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
   const [level, setLevel] = useState(1)
   const [currentExperience, setCurrentExperience] = useState(0)
+  const [totalExperience, setTotalExperience] = useState(0)
+
   const [challengesCompleted, setChallengesCompleted] = useState(0)
 
   const [activeChallenge, setActiveChallenge] = useState(null)
@@ -69,6 +72,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         .then((response) => {
           setChallengesCompleted(response.data.user.challengesCompleted || 0)
           setCurrentExperience(response.data.user.currentExp || 0)
+          setTotalExperience(response.data.user.totalExp || 0)
           setLevel(response.data.user.level || 1)
         })
         .catch((e) => {
@@ -81,9 +85,11 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
       axios.post(`/api/user`, {
         level: level || 1,
         currentExp: currentExperience,
+        totalExp: totalExperience,
         email: userData?.email,
         challengesCompleted,
-        photo: userData.photo
+        photo: userData?.photo,
+        name: userData?.name
       })
     }
   }, [
@@ -92,7 +98,9 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     challengesCompleted,
     loading,
     userData?.email,
-    userData.photo
+    userData?.photo,
+    totalExperience,
+    userData?.name
   ])
 
   function levelUp() {
@@ -114,7 +122,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
     toast.info('Você tem um novo desafio 🎉', {
       position: 'top-right',
-      autoClose: 3000,
+      autoClose: 2000,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true
@@ -168,9 +176,12 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     }
 
     setCurrentExperience(finalExperience)
+    setTotalExperience(totalExperience + amount)
     setActiveChallenge(null)
     setChallengesCompleted(challengesCompleted + 1)
+    console.log(finalExperience)
   }
+  console.log(totalExperience)
   return (
     <ChallengesContext.Provider
       value={{
@@ -179,6 +190,7 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         challengesCompleted,
         activeChallenge,
         experienceToNextLevel,
+        totalExperience,
         isLevelModalOpen,
         startNewChallenge,
         levelUp,

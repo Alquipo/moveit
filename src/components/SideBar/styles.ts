@@ -2,6 +2,10 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.aside`
   ${({ theme }) => css`
+    height: 100vh;
+    width: 5rem;
+    padding: 2.3rem 2.2rem;
+
     background: ${theme.colors.backgroundBox};
     color: ${theme.colors.text};
     transition: background-color 0.3s, color 0.3s;
@@ -10,17 +14,8 @@ export const Wrapper = styled.aside`
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    /* padding: 0 30px; */
 
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    height: 100vh;
-    width: 5rem;
-    padding: 2.3rem 2.2rem;
-
-    @media (max-width: 800px) {
+    @media (max-width: 720px) {
       flex-direction: row;
 
       padding: 2rem;
@@ -42,12 +37,15 @@ export const WrapperNavigation = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 800px) {
+  @media (max-width: 720px) {
     flex-direction: row;
   }
 `
 
-export const LinkMenu = styled.a`
+interface LinkMenuProps {
+  active?: boolean
+}
+export const LinkMenu = styled.a<LinkMenuProps>`
   cursor: pointer;
   width: 100%;
   margin: 0.25rem 0;
@@ -61,7 +59,8 @@ export const LinkMenu = styled.a`
   svg {
     width: 40px;
     height: 40px;
-    fill: ${({ theme }) => theme.colors.blue};
+    fill: ${({ theme, active }) =>
+      active ? theme.colors.blue : theme.colors.text};
     transition: all 0.2s;
   }
   position: relative;
@@ -75,10 +74,10 @@ export const LinkMenu = styled.a`
     left: -19px;
     height: 100%;
     border-radius: 0 10px 10px 0;
-    background: ${({ theme }) => theme.colors.blue};
+    background: ${({ theme, active }) => (active ? theme.colors.blue : 'none')};
     transition: all 0.3s;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 720px) {
     margin: 0 1rem;
 
     &:after {
