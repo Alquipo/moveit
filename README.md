@@ -95,6 +95,7 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
     -Adicionado mongodb para salvar informações;
     -Adicionado pagina de Leaderboard na aplicação;
     -Adicionado theme dark na aplicação;
+    -Adicionado save theme no localStorage;
     -Adicionado Switch para alterar os themes;
     -Adicionado Test com Jest;
     -Adicionado storybook para os component;
