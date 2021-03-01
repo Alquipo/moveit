@@ -48,6 +48,7 @@ O [NLW](https://nextlevelweek.com/inscricao/1) é uma semana prática com muito 
 Através do método da [Rocketseat](https://nextlevelweek.com/inscricao/1), você aprenderá novas ferramentas, tecnologias e descobrirá hacks que irão impulsionar sua carreira.
 Um evento online e totalmente gratuito que o ajudará a dar o próximo passo na sua evolução como desenvolvedor.
 -->
+
 ## 🚀 Sobre o Projeto
 
 MoveIt e uma aplicação para incentivar quem fica horas no computador a se exercitar, usando o método pomodoro, a cada 25 minutos concentrado no trabalho ele terá uma pausa para efetuar um pequeno exercício e com adição da gamificação na aplicação tudo fica mais divertido.
@@ -68,12 +69,27 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
 ### Web
 
 <h4 align="center">
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop.gif" width="500px" />
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/moveit.gif" width="700px" />
 </h4>
-<h4 align="center">
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-dark.png" width="400px" />
 
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-light.png" width="400px" />
+#### Theme Dark
+
+<h4 align="center">
+  <img alt="home-dark" title="home-dark" src=".github/readme/home-dark.png" width="400px" />
+  <img alt="dashboard-dark" title="dashboard-dark" src=".github/readme/dashboard-dark.png" width="400px" />
+  <img alt="challenges-dark" title="challenges-dark" src=".github/readme/challenges-dark.png" width="400px" />
+  <img alt="challenges-completed-dark" title="challenges-completed-dark" src=".github/readme/challenges-completed-dark.png" width="400px" />
+  <img alt="leaderboard" title="leaderboard" src=".github/readme/leaderboard-dark.png" width="400px" />
+</h4>
+
+#### Theme Light
+
+<h4 align="center">
+  <img alt="home-light" title="home-light" src=".github/readme/home-light.png" width="400px" />
+  <img alt="dashboard-light" title="dashboard-light" src=".github/readme/dashboard-light.png" width="400px" />
+  <img alt="challenges-light" title="challenges-light" src=".github/readme/challenges-light.png" width="400px" />
+  <img alt="challenges-completed-light" title="challenges-completed-light" src=".github/readme/challenges-completed-light.png" width="400px" />
+  <img alt="leaderboard" title="leaderboard" src=".github/readme/leaderboard-light.png" width="400px" />
 </h4>
 
 <br/>
@@ -108,6 +124,13 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
     -Adicionado component para SEO;
     -Efetuado diversos ajustes no designer da aplicação;
     -Efetuado ajustes para o mobile e PWA;
+
+## 🎖 Milestone
+
+    -Melhorar a SSR da aplicação
+    -Adicionar compartilhar com Redes Sociais
+    -Concluir os testes
+    -Ajustes no Storybook
 
 ## 🔨 Tecnologias:
 
