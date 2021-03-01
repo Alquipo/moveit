@@ -22,8 +22,9 @@ export async function getStaticProps() {
   const { data } = await api.get('/api/user')
 
   return {
+    revalidate: 60,
+
     props: {
-      revalidate: 60,
       users: data.users
     }
   }
