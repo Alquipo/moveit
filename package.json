@@ -19,7 +19,6 @@
     "@vercel/node": "^1.9.0",
     "axios": "^0.21.1",
     "firebase": "^8.2.9",
-    "js-cookie": "^2.2.1",
     "mongodb": "^3.6.4",
     "next": "10.0.7",
     "next-pwa": "^5.0.4",

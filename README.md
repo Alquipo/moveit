@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-🚧 MoveIt | Em Construção 🚧
+🚧 MoveIt 2.0 | Em Construção 🚧
 </h1>
 
 <p align="center">
@@ -36,32 +36,32 @@
   </a>
 </p>
 
-<h3 align="center">
-  Bem Vindo ao App MoveIt
-</h3>
+<h2 align="center">
+  Bem Vindo ao App MoveIt 2.0
+</h2>
 
 ## :information_source: O que é Next Level Week?
 
 O [NLW](https://nextlevelweek.com/inscricao/1) é uma semana prática com muito código, desafios, network e com um único objetivo: levá-lo ao próximo nível.
-Através do método da [Rocketseat][rs], você aprenderá novas ferramentas, tecnologias e descobrirá hacks que irão impulsionar sua carreira.
+Através do método da [Rocketseat](https://nextlevelweek.com/inscricao/1), você aprenderá novas ferramentas, tecnologias e descobrirá hacks que irão impulsionar sua carreira.
 Um evento online e totalmente gratuito que o ajudará a dar o próximo passo na sua evolução como desenvolvedor.
 
 ## 🚀 Sobre o Projeto
 
-MoveIt e uma aplicação para incentivar que fica horas no computador para se exercitar, usando o método pomodoro, a cada 25 minutos concentrado no trabalho ele terá uma pausa para efetuar um pequeno exercício e com adição da gamificação na aplicação tudo fica mais divertido.
+MoveIt e uma aplicação para incentivar quem fica horas no computador para se exercitar, usando o método pomodoro, a cada 25 minutos concentrado no trabalho ele terá uma pausa para efetuar um pequeno exercício e com adição da gamificação na aplicação tudo fica mais divertido.
 
 ## 🎨 Layout
 
 Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/)
 
-### Mobile
+<!-- ### Mobile
 
 <h4 align="center">
   <img alt="ExampleMobile" title="ExampleMobile" src=".github/readme/mobile.gif" width="200px" />
   <img alt="ExampleMobile" title="ExampleMobile" src=".github/readme/mobile-dark.jpeg" width="200px" />
   <img alt="ExampleMobile" title="ExampleMobile" src=".github/readme/mobile-light.jpeg" width="200px" />
   <!-- <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-detail.jpg" width="200px" /> -->
-</h4>
+<!-- </h4> -->
 
 ### Web
 
@@ -74,22 +74,31 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
   <img alt="ExampleWeb" title="ExampleWeb" src=".github/readme/desktop-light.png" width="400px" />
 </h4>
 
-### Storybook
+<br/>
+
+### Storybook e Test
 
 <h4 align="center">
-  <img alt="Example Test" title="ExampleTest" src=".github/readme/storybook.png" width="800px" />
+  <img alt="Example Test" title="ExampleTest" src=".github/readme/storybook.png" width="400px" />
 
-### Test
-
-<h4 align="center">
-  <img alt="Example Test" title="ExampleTest" src=".github/readme/test-temporary.png" width="800px" />
+  <img alt="Example Test" title="ExampleTest" src=".github/readme/test-temporary.png" width="400px" />
 
 </h4>
+
+<br/>
+
 ## :tada: Melhorias na Aplicação
 
+    -Adicionado api serverless na aplicação;
+    -Adicionado autenticação com github via Auth0;
+    -Adicionado Firebase para efetuar autenticação;
+    -Adicionado mongodb para salvar informações;
+    -Adicionado pagina de Leaderboard na aplicação;
     -Adicionado theme dark na aplicação;
-    -Adicionado opção de PWA na aplicação;
     -Adicionado Switch para alterar os themes;
+    -Adicionado Test com Jest;
+    -Adicionado storybook para os component;
+    -Adicionado opção de PWA na aplicação;
     -Adicionado Ícones para representar os botões;
     -Adicionado component para SEO;
     -Efetuado diversos ajustes no designer da aplicação;
@@ -99,6 +108,9 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
 
 - **[TypeScript](https://www.typescriptlang.org/)**
 - **[NextJS](https://nextjs.org/)**
+- **[Firebase](https://firebase.google.com/?hl=pt-br)**
+- **[Mongodb](https://www.mongodb.com/)**
+- **[Axios](https://github.com/axios/axios)**
 - **[Styled Components](https://styled-components.com/)**
 - **[Jest](https://jestjs.io/)**
 - **[React Testing Library](https://testing-library.com/docs/react-testing-library/intro)**
@@ -160,6 +172,29 @@ $ yarn storybook
 
 #Rodar os testes
 $ yarn test
+
+```
+
+### 📁 Configuração .ENV
+
+```bash
+#adicionado .env.example no projeto, lembrar de adicionar as variáveis de ambiente conforme o exemplo
+
+# FIREBASE
+NEXT_PUBLIC_APIKEY=
+NEXT_PUBLIC_AUTHDOMAIN=
+NEXT_PUBLIC_PROJECTID=
+NEXT_PUBLIC_STORAGEBUCKET=
+NEXT_PUBLIC_MESSAGINGSENDERID=
+NEXT_PUBLIC_APPID=
+NEXT_PUBLIC_MEASUREMENTID=
+
+# MONGODB
+MONGODB_URI=
+
+# API URLS
+BASE_URL=
+
 
 ```
 
