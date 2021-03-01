@@ -97,6 +97,7 @@ Design feito por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/
     -Adicionado theme dark na aplicação;
     -Adicionado save theme no localStorage;
     -Adicionado Switch para alterar os themes;
+    -Adicionado Toast como notificação;
     -Adicionado Test com Jest;
     -Adicionado storybook para os component;
     -Adicionado opção de PWA na aplicação;

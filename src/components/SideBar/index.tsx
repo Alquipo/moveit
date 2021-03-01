@@ -37,8 +37,8 @@ const SideBar = () => {
       </svg>
 
       <S.WrapperNavigation>
-        <Link href="/">
-          <S.LinkMenu active={router.pathname === '/'}>
+        <Link href="/dashboard">
+          <S.LinkMenu active={router.pathname === '/dashboard'}>
             <HomeAlt />
           </S.LinkMenu>
         </Link>

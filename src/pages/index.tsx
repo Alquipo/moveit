@@ -1,15 +1,16 @@
 import { useAuth } from 'contexts/AuthContext'
+import { useRouter } from 'next/router'
 import React from 'react'
-import DashboardTemplate from 'templates/Dashboard'
 import HomeTemplate from 'templates/Home'
 
 export default function Home() {
   const { isLogged, userData } = useAuth()
+  const router = useRouter()
 
   return (
     <>
       {userData === null && <HomeTemplate />}
-      {isLogged && <DashboardTemplate />}
+      {isLogged && router.push('/dashboard')}
     </>
   )
 }

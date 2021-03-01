@@ -51,7 +51,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const loginWithGitHub = useCallback(async () => {
     const provider = new firebase.auth.GithubAuthProvider()
 
-    return await firebase.auth().signInWithRedirect(provider)
+    return await firebase
+      .auth()
+      .signInWithRedirect(provider)
+      .then(() => {
+        window.location.href = '/dashboard'
+      })
   }, [])
 
   const logout = useCallback(async () => {
@@ -59,7 +64,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
       .auth()
       .signOut()
       // eslint-disable-next-line @typescript-eslint/no-empty-function
-      .then(() => {})
+      .then(() => {
+        window.location.href = '/'
+      })
   }, [])
 
   return (

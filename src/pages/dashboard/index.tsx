@@ -1,4 +1,5 @@
 import { useAuth } from 'contexts/AuthContext'
+// import { GetServerSideProps } from 'next'
 import React from 'react'
 import DashboardTemplate from 'templates/Dashboard'
 import HomeTemplate from 'templates/Home'
@@ -13,6 +14,17 @@ export default function Dashboard() {
     </>
   )
 }
+
+// export const getServerSideProps: GetServerSideProps = async ({
+//   req,
+//   params
+// }) => {
+//   console.log(req)
+//   // console.log(params)
+//   return {
+//     props: {}
+//   }
+// }
 
 // export const getServerSideProps: GetServerSideProps = async ({
 //   req
