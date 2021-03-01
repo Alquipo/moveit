@@ -10,7 +10,29 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+
   ${({ theme }) => css`
+
+  //scrollbar configuration
+  ::-webkit-scrollbar{
+      width: 0.5rem;
+
+    }
+    ::-webkit-scrollbar-track {
+      background: ${theme.colors.background};
+
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: ${theme.colors.backgroundBox};
+      border-radius: 1rem;
+
+    }
+    ::-webkit-scrollbar-thumb:hover {
+     background: ${theme.colors.background};
+
+    }
+
     @media (max-width: 1080px) {
       html {
         font-size: 93.75%;
