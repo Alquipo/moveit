@@ -1,13 +1,14 @@
 import { Container } from './styles'
 
-interface UserGithubProps {
+import * as S from './styles'
+
+interface RankingUserProps {
   user: UserProps
   position: number
 }
 
-interface UserProps {
+export type UserProps = {
   _id: string
-  email: string
   name: string
   level: number
   currentExp: number
@@ -16,24 +17,22 @@ interface UserProps {
   photo: string
 }
 
-const UserGithub = ({ user, position }: UserGithubProps) => {
-  // useEffect(() => {}, [])
-
+const RankingUser = ({ user, position }: RankingUserProps) => {
   return (
     <Container>
-      <div className="position">
+      <S.PositionWrapper>
         <h1>{position + 1}</h1>
-      </div>
-      <div className="info">
+      </S.PositionWrapper>
+      <S.InfoWrapper>
         <div>
           <img src={user.photo} />
-          <div className="profile">
+          <S.ProfileWrapper>
             <strong>{user.name}</strong>
             <p>
               <img src="/icons/level.svg" />
               {user.level} level
             </p>
-          </div>
+          </S.ProfileWrapper>
         </div>
 
         <p>
@@ -43,9 +42,9 @@ const UserGithub = ({ user, position }: UserGithubProps) => {
         <p>
           <strong>{user.totalExp}</strong> xp
         </p>
-      </div>
+      </S.InfoWrapper>
     </Container>
   )
 }
 
-export default UserGithub
+export default RankingUser

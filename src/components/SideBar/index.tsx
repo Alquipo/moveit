@@ -12,7 +12,7 @@ const SideBar = () => {
   const { ToggleTheme, theme } = useTheme()
 
   const router = useRouter()
-  console.log(router.pathname)
+
   return (
     <S.Wrapper>
       <svg
@@ -37,8 +37,8 @@ const SideBar = () => {
       </svg>
 
       <S.WrapperNavigation>
-        <Link href="/dashboard">
-          <S.LinkMenu active={router.pathname === '/dashboard'}>
+        <Link href="/">
+          <S.LinkMenu active={router.pathname === '/'}>
             <HomeAlt />
           </S.LinkMenu>
         </Link>

@@ -23,7 +23,6 @@ const connectToDatabase = async (uri: string) => {
 export default async function (request: NowRequest, response: NowResponse) {
   if (request.method === 'GET') {
     const { email } = request.query
-    // console.log('email', email)
     try {
       const db = await connectToDatabase(process.env.MONGODB_URI)
 
