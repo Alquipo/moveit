@@ -35,7 +35,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         setUserData({
-          name: user.displayName || 'Adiciona o nome no Github',
+          name: user.displayName || 'Sem Nome no gitHub',
           photo: user.photoURL,
           email: user.email
         })
