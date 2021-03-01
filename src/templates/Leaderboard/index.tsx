@@ -1,6 +1,6 @@
 import SEO from 'components/SEO'
 import SideBar from 'components/SideBar'
-import RankingUser, { UserProps } from 'components/RankingUser'
+import LeaderboardUser, { UserProps } from 'components/LeaderboardUser'
 
 import * as S from './styles'
 
@@ -18,25 +18,25 @@ const LeaderboardTemplate = ({ users }: LeaderboardTemplateProps) => {
       />
       <SideBar />
       <S.Content>
-        <h1>Ranking geral</h1>
+        <h1>Leaderboard</h1>
 
-        <div className="ranking">
-          <div className="ranking-title">
+        <S.Ranking>
+          <S.RankingTitle>
             <div>
               <strong>Posição</strong>
               <strong>Usuário</strong>
             </div>
             <div>
               <strong>Desafios</strong>
-              <strong>Experiencia</strong>
+              <strong>Experiência</strong>
             </div>
-          </div>
+          </S.RankingTitle>
           <div className="ranking-list">
             {users.map((user, i) => (
-              <RankingUser key={user._id} position={i} user={user} />
+              <LeaderboardUser key={user._id} position={i} user={user} />
             ))}
           </div>
-        </div>
+        </S.Ranking>
       </S.Content>
     </S.Wrapper>
   )

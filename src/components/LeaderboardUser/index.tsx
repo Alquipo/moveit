@@ -2,7 +2,7 @@ import { Container } from './styles'
 
 import * as S from './styles'
 
-interface RankingUserProps {
+interface LeaderboardUserProps {
   user: UserProps
   position: number
 }
@@ -17,34 +17,36 @@ export type UserProps = {
   photo: string
 }
 
-const RankingUser = ({ user, position }: RankingUserProps) => {
+const LeaderboardUser = ({ user, position }: LeaderboardUserProps) => {
   return (
     <Container>
       <S.PositionWrapper>
         <h1>{position + 1}</h1>
       </S.PositionWrapper>
       <S.InfoWrapper>
-        <div>
+        <S.ProfileWrapper>
           <img src={user.photo} />
-          <S.ProfileWrapper>
+          <div>
             <strong>{user.name}</strong>
             <p>
               <img src="/icons/level.svg" />
               {user.level} level
             </p>
-          </S.ProfileWrapper>
-        </div>
+          </div>
+        </S.ProfileWrapper>
 
-        <p>
-          <strong>{user.challengesCompleted}</strong> completados
-        </p>
+        <S.ExpWrapper>
+          <p>
+            <strong>{user.challengesCompleted}</strong> completados
+          </p>
 
-        <p>
-          <strong>{user.totalExp}</strong> xp
-        </p>
+          <p>
+            <strong>{user.totalExp}</strong> xp
+          </p>
+        </S.ExpWrapper>
       </S.InfoWrapper>
     </Container>
   )
 }
 
-export default RankingUser
+export default LeaderboardUser

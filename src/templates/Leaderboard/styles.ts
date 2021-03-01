@@ -23,41 +23,48 @@ export const Content = styled.div`
   flex-direction: column;
 
   overflow-y: auto;
+
   > h1 {
     color: ${({ theme }) => theme.colors.title};
+    transition: color 0.3s;
     font-size: 2.8rem;
   }
-  .ranking {
+`
+export const Ranking = styled.div`
+  flex: 1;
+  margin-top: 2.5rem;
+
+  .ranking-list {
     flex: 1;
-    margin-top: 2.5rem;
+  }
+`
+export const RankingTitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 
-    .ranking-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1.5rem;
-      > strong {
-        color: ${({ theme }) => theme.colors.text};
-        font-weight: bold;
-      }
-      > div:first-child {
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        > strong {
-          margin-right: 2rem;
-        }
-      }
-      > div:last-child {
-        font-size: 0.875rem;
-        text-transform: uppercase;
+  div {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
 
-        > strong {
-          margin-left: 5rem;
-        }
-      }
+  div:first-child {
+    strong {
+      margin-right: 2rem;
     }
-    .ranking-list {
-      flex: 1;
+
+    strong:first-child {
+      margin-left: 0.2rem;
+    }
+  }
+  div:last-child {
+    strong {
+      margin-left: 6rem;
+    }
+
+    strong:last-child {
+      margin-right: 1rem;
     }
   }
 `
