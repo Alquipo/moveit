@@ -26,6 +26,10 @@ export const Wrapper = styled.aside`
       width: 100%;
       height: 3rem;
 
+      div:last-child {
+        margin-right: 1.2rem;
+      }
+
       svg {
         width: 3rem;
       }

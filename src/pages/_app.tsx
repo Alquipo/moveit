@@ -12,6 +12,7 @@ function App({ Component, pageProps }: AppProps) {
       <ThemesProvider>
         <GlobalStyles />
         <ToastContainer />
+
         <Component {...pageProps} />
       </ThemesProvider>
     </AuthProvider>
