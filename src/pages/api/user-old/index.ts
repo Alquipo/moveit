@@ -30,7 +30,7 @@ export default async function (request: NowRequest, response: NowResponse) {
         name
       } = request.body
 
-      const db = await connectToDatabase(process.env.MONGODB_URI)
+      const db = await connectToDatabase(process.env.DATABASE_URL)
 
       const collection = db.collection('users')
 
