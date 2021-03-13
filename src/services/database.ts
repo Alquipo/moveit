@@ -8,7 +8,7 @@ const client = new MongoClient(process.env.DATABASE_URL, {
 export default async function connectToDatabase() {
   if (!client.isConnected()) await client.connect()
 
-  const db = client.db('moveit')
+  const db = client.db('moveit').collection('users')
 
   return db
 }

@@ -5,12 +5,13 @@ import * as S from './styles'
 import Tooltip from 'components/Tooltip'
 import Logo from 'components/Logo'
 import SEO from 'components/SEO'
+import { signIn, signOut } from 'next-auth/client'
 import { useAuth } from 'contexts/AuthContext'
 
 const HomeTemplate = () => {
   const { ToggleTheme } = useTheme()
 
-  const { loginWithGitHub } = useAuth()
+  // const { loginWithGitHub } = useAuth()
 
   return (
     <S.Wrapper>
@@ -56,7 +57,7 @@ const HomeTemplate = () => {
                 <S.ButtonLogin>{` -> `}</S.ButtonLogin>
               )} */}
 
-              <S.ButtonLogin type="button" onClick={loginWithGitHub}>
+              <S.ButtonLogin type="button" onClick={() => signIn('auth0')}>
                 <Github color="#FFF" size={32} /> Sign in with Github
               </S.ButtonLogin>
             </S.LoginContainer>
