@@ -3,20 +3,18 @@ import { useContext } from 'react'
 import Link from 'next/link'
 import { LogOut } from '@styled-icons/ionicons-outline/LogOut'
 import * as S from './styles'
-import { useAuth } from 'contexts/AuthContext'
+import { signOut, useSession } from 'next-auth/client'
 
 const Profile = () => {
   const { level } = useContext(ChallengesContext)
-  const { userData } = useAuth()
-
-  const { logout } = useAuth()
+  const [session, loading] = useSession()
 
   return (
     <S.Wrapper>
-      <S.ProfileImage src={userData?.photo} alt={userData?.name} />
+      <S.ProfileImage src={session?.user.image} alt={session?.user.name} />
 
       <div>
-        <strong>{userData?.name}</strong>
+        <strong>{session?.user.name}</strong>
         <p>
           <img src="icons/level.svg" alt="Level" />
           Level {level}
@@ -24,7 +22,7 @@ const Profile = () => {
       </div>
 
       <Link href="/">
-        <LogOut size={40} role="button" onClick={logout} />
+        <LogOut size={40} role="button" onClick={() => signOut()} />
       </Link>
     </S.Wrapper>
   )

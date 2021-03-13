@@ -1,70 +1,60 @@
+import { ChallengesProvider } from 'contexts/ChallengesContext'
+import { CountdownProvider } from 'contexts/CountdownContext'
+import GithubCorner from 'react-github-corner'
 import { useTheme } from 'contexts/ThemeContext'
 
-import { Github } from '@styled-icons/bootstrap/Github'
-import * as S from './styles'
-import Tooltip from 'components/Tooltip'
-import Logo from 'components/Logo'
 import SEO from 'components/SEO'
-import { signIn, signOut } from 'next-auth/client'
-import { useAuth } from 'contexts/AuthContext'
+import CompletedChallenges from 'components/CompletedChallenges'
+import Countdown from 'components/Countdown'
+import ExperienceBar from 'components/ExperienceBar'
+import Profile from 'components/Profile'
+import SideBar from 'components/SideBar'
+
+import * as S from './styles'
+import ChallengeBox from 'components/ChallengeBox'
+import { useRouter } from 'next/router'
 
 const HomeTemplate = () => {
-  const { ToggleTheme } = useTheme()
-
-  // const { loginWithGitHub } = useAuth()
+  const { theme } = useTheme()
 
   return (
-    <S.Wrapper>
+    <ChallengesProvider>
       <SEO
-        title="Home"
+        title="Dashboard"
         image="logo-full.svg"
         description="A app to make you move."
         shouldIndexPage
       />
-      <section>
-        <S.LeftSide>
-          <img src="/img/Logo-background.svg" alt="" />
-        </S.LeftSide>
-        <S.RightSide>
-          <Logo />
-          <div>
-            <strong>Bem-vindo</strong>
 
-            <S.TitleContainer>
-              <button type="button" onClick={ToggleTheme}>
-                <Tooltip text="Clique aqui para mudar o tema">
-                  <Github size={55} />
-                </Tooltip>
-              </button>
+      <GithubCorner
+        href="https://github.com/Alquipo/moveit"
+        size={65}
+        bannerColor={theme.colors.blue}
+        target="_blank"
+        aria-label="Open GitHub project"
+      />
 
-              <span>Faça login com o Github para começar</span>
-            </S.TitleContainer>
+      <S.Wrapper>
+        <SideBar />
+        <S.Content>
+          <ExperienceBar />
 
-            <S.LoginContainer>
-              {/* <input
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Digite seu usuário"
-              /> */}
+          <CountdownProvider>
+            <S.Section>
+              <S.LeftContainer>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </S.LeftContainer>
 
-              {/* {username ? (
-                <S.ButtonLogin
-                  type="submit"
-                  onClick={handleUsername}
-                  isSubmit
-                >{` -> `}</S.ButtonLogin>
-              ) : (
-                <S.ButtonLogin>{` -> `}</S.ButtonLogin>
-              )} */}
-
-              <S.ButtonLogin type="button" onClick={() => signIn('auth0')}>
-                <Github color="#FFF" size={32} /> Sign in with Github
-              </S.ButtonLogin>
-            </S.LoginContainer>
-          </div>
-        </S.RightSide>
-      </section>
-    </S.Wrapper>
+              <S.RightContainer>
+                <ChallengeBox />
+              </S.RightContainer>
+            </S.Section>
+          </CountdownProvider>
+        </S.Content>
+      </S.Wrapper>
+    </ChallengesProvider>
   )
 }
 

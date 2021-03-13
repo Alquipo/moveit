@@ -42,17 +42,37 @@ export default async function (request: NowRequest, response: NowResponse) {
 
     const db = await connectToDatabase()
 
-    const collection = await db.insertOne({
-      name: name || 'Sem Nome no gitHub',
-      email,
-      level: level || 1,
-      currentExp,
-      totalExp,
-      challengesCompleted,
-      photo
-    })
+    const update = await db.findOne({ email })
 
-    response.status(200).json(collection.ops[0])
+    if (update) {
+      await db.updateOne(
+        { _id: update._id },
+        {
+          $set: {
+            level,
+            currentExp,
+            totalExp,
+            challengesCompleted,
+            photo,
+            name
+          }
+        }
+      )
+    } else {
+      await db.insertOne({
+        level,
+        email,
+        currentExp,
+        totalExp,
+        challengesCompleted,
+        photo,
+        name
+      })
+    }
+
+    response
+      .status(200)
+      .json({ success: true, message: 'Developer by Alquipo Neto' })
   } else {
     response.status(400).json({
       success: false,

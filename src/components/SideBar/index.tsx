@@ -37,14 +37,14 @@ const SideBar = () => {
       </svg>
 
       <S.WrapperNavigation>
-        <Link href="/dashboard">
-          <S.LinkMenu active={router.pathname === '/dashboard'}>
+        <Link href="/">
+          <S.LinkMenu active={router.pathname === '/'}>
             <HomeAlt />
           </S.LinkMenu>
         </Link>
 
-        <Link href="/dashboard/leaderboard">
-          <S.LinkMenu active={router.pathname === '/dashboard/leaderboard'}>
+        <Link href="/leaderboard">
+          <S.LinkMenu active={router.pathname === '/leaderboard'}>
             <Award />
           </S.LinkMenu>
         </Link>

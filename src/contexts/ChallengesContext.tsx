@@ -1,13 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, ReactNode, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
+import useSWR from 'swr'
 
-// import Cookies from 'js-cookie'
 import challenges from 'data/challenges.json'
 import axios from 'axios'
-import { useAuth } from './AuthContext'
 
 import Modal from 'components/Modal'
+import { useSession } from 'next-auth/client'
 
 type ChallengesProviderProps = {
   children: ReactNode
@@ -40,7 +40,7 @@ type ChallengesContextData = {
 export const ChallengesContext = createContext({} as ChallengesContextData)
 
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
-  const { userData } = useAuth()
+  const [session, loading] = useSession()
 
   const [level, setLevel] = useState(1)
   const [currentExperience, setCurrentExperience] = useState(0)
@@ -52,24 +52,19 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
   const [isLevelModalOpen, setIsLevelModalOpen] = useState(false)
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
 
   //pedindo permissão
   // useEffect(() => {
   //   Notification.requestPermission()
   // }, [])
 
-  //salvando Cookies
-  // useEffect(() => {
-  //   Cookies.set('level', String(level))
-  //   Cookies.set('currentExperience', String(currentExperience))
-  //   Cookies.set('challengesCompleted', String(challengesCompleted))
-  // }, [level, currentExperience, challengesCompleted])
+  // const { data, error } = useSWR('/api/user')
 
   useEffect(() => {
     if (loading) {
       axios
-        .get(`/api/user/${userData.email}`)
+        .get(`/api/user/${session?.user.email}`)
         .then((response) => {
           setChallengesCompleted(response.data.user.challengesCompleted || 0)
           setCurrentExperience(response.data.user.currentExp || 0)
@@ -79,18 +74,15 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         .catch((e) => {
           console.log('Erro ao buscar dados do user', e)
         })
-        .finally(() => {
-          setLoading(false)
-        })
     } else {
       axios.post(`/api/user`, {
         level: level || 1,
         currentExp: currentExperience,
         totalExp: totalExperience,
-        email: userData?.email,
+        email: session?.user.email,
         challengesCompleted,
-        photo: userData?.photo,
-        name: userData?.name
+        photo: session?.user.image,
+        name: session?.user.name
       })
     }
   }, [level, currentExperience, challengesCompleted, loading, totalExperience])

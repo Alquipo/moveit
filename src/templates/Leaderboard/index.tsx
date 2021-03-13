@@ -8,7 +8,6 @@ export type LeaderboardTemplateProps = {
   users: UserProps[]
 }
 const LeaderboardTemplate = ({ users }: LeaderboardTemplateProps) => {
-  console.log(users)
   return (
     <S.Wrapper>
       <SEO
